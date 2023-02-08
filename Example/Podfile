@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'FrenchToast_Example' do
+  pod 'FrenchToast', :path => '../'
+
+  target 'FrenchToast_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
