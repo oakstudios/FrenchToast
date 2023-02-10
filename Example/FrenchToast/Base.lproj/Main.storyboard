@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--French Toast-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="FrenchToast_Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,13 +16,121 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7Q-Pa-UQf">
+                                <rect key="frame" x="0.0" y="815" width="430" height="83"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="HfF-K0-mHJ"/>
+                                    <tabBarItem systemItem="more" id="zrQ-tr-Kya"/>
+                                </items>
+                            </tabBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="t3O-tA-xcA">
+                                <rect key="frame" x="75" y="386.66666666666669" width="280" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="1te-1N-mIi"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Top"/>
+                                    <segment title="Center"/>
+                                    <segment title="Bottom"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZpQ-pQ-4As">
+                                <rect key="frame" x="75" y="318.66666666666669" width="280" height="32"/>
+                                <segments>
+                                    <segment title="Definite (3s)"/>
+                                    <segment title="Indefinite"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vm-Fe-eVx">
+                                <rect key="frame" x="75" y="297.66666666666669" width="280" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toast Style" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cff-KZ-dgm">
+                                <rect key="frame" x="75" y="229.66666666666666" width="280" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vertical Alignment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAr-rX-yrb">
+                                <rect key="frame" x="75" y="365.66666666666669" width="280" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NKT-nQ-H1Z">
+                                <rect key="frame" x="75" y="250.66666666666663" width="280" height="32"/>
+                                <segments>
+                                    <segment title="Simple"/>
+                                    <segment title="Music"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVR-xa-Glr">
+                                <rect key="frame" x="131" y="462" width="112" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Toast" cornerStyle="medium">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapShowToast:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MpJ-m1-GmE"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3B-ef-qJ3">
+                                <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="i0T-5p-Yuz"/>
+                                </items>
+                                <navigationBarAppearance key="scrollEdgeAppearance"/>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RVR-xa-Glr" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="1X7-Qt-aeg"/>
+                            <constraint firstItem="NKT-nQ-H1Z" firstAttribute="trailing" secondItem="t3O-tA-xcA" secondAttribute="trailing" id="2Y8-sL-OPS"/>
+                            <constraint firstItem="1vm-Fe-eVx" firstAttribute="trailing" secondItem="ZpQ-pQ-4As" secondAttribute="trailing" id="2v4-v6-dcl"/>
+                            <constraint firstItem="ZpQ-pQ-4As" firstAttribute="leading" secondItem="t3O-tA-xcA" secondAttribute="leading" id="4B8-nC-Pso"/>
+                            <constraint firstItem="e3B-ef-qJ3" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="4BP-XX-gbg"/>
+                            <constraint firstItem="NKT-nQ-H1Z" firstAttribute="top" secondItem="cff-KZ-dgm" secondAttribute="bottom" constant="4" id="5W5-bN-cgr"/>
+                            <constraint firstItem="aAr-rX-yrb" firstAttribute="leading" secondItem="t3O-tA-xcA" secondAttribute="leading" id="9sK-yW-Qmd"/>
+                            <constraint firstItem="aAr-rX-yrb" firstAttribute="trailing" secondItem="t3O-tA-xcA" secondAttribute="trailing" id="AJU-Ki-gqC"/>
+                            <constraint firstItem="ZpQ-pQ-4As" firstAttribute="top" secondItem="1vm-Fe-eVx" secondAttribute="bottom" constant="4" id="FFu-bg-d7y"/>
+                            <constraint firstItem="cff-KZ-dgm" firstAttribute="trailing" secondItem="NKT-nQ-H1Z" secondAttribute="trailing" id="Hmn-om-U11"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="K7Q-Pa-UQf" secondAttribute="bottom" id="IGv-af-3ld"/>
+                            <constraint firstItem="cff-KZ-dgm" firstAttribute="leading" secondItem="NKT-nQ-H1Z" secondAttribute="leading" id="NFs-fy-Csv"/>
+                            <constraint firstItem="K7Q-Pa-UQf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="NdV-gB-BRr"/>
+                            <constraint firstAttribute="trailing" secondItem="e3B-ef-qJ3" secondAttribute="trailing" id="OKE-66-yGm"/>
+                            <constraint firstItem="ZpQ-pQ-4As" firstAttribute="trailing" secondItem="t3O-tA-xcA" secondAttribute="trailing" id="UYB-0k-UdR"/>
+                            <constraint firstItem="t3O-tA-xcA" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="cIF-fr-jxc"/>
+                            <constraint firstItem="NKT-nQ-H1Z" firstAttribute="leading" secondItem="t3O-tA-xcA" secondAttribute="leading" id="gtC-8R-a3l"/>
+                            <constraint firstItem="1vm-Fe-eVx" firstAttribute="leading" secondItem="ZpQ-pQ-4As" secondAttribute="leading" id="iKd-TT-ttC"/>
+                            <constraint firstItem="t3O-tA-xcA" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="-64" id="iRM-E5-IUq"/>
+                            <constraint firstItem="1vm-Fe-eVx" firstAttribute="top" secondItem="NKT-nQ-H1Z" secondAttribute="bottom" constant="16" id="jNV-cq-uM9"/>
+                            <constraint firstItem="RVR-xa-Glr" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="lVH-C2-A3b"/>
+                            <constraint firstItem="t3O-tA-xcA" firstAttribute="top" secondItem="aAr-rX-yrb" secondAttribute="bottom" constant="4" id="mDO-2D-oew"/>
+                            <constraint firstItem="e3B-ef-qJ3" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="me5-9I-i7v"/>
+                            <constraint firstItem="aAr-rX-yrb" firstAttribute="top" secondItem="ZpQ-pQ-4As" secondAttribute="bottom" constant="16" id="ttP-Hf-u5u"/>
+                            <constraint firstAttribute="trailing" secondItem="K7Q-Pa-UQf" secondAttribute="trailing" id="u1o-Mu-d2X"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="French Toast" id="Q3O-sm-iYr"/>
+                    <connections>
+                        <outlet property="durationSegmentedControl" destination="ZpQ-pQ-4As" id="mYa-RY-D5o"/>
+                        <outlet property="positionSegmentedControl" destination="t3O-tA-xcA" id="IIn-fk-9eW"/>
+                        <outlet property="toastStyleSegmentedControl" destination="NKT-nQ-H1Z" id="snG-Yu-Dri"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-162.40000000000001" y="-36.431784107946029"/>
         </scene>
     </scenes>
 </document>

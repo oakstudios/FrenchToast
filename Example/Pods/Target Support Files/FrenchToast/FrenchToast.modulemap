@@ -1,0 +1,6 @@
+framework module FrenchToast {
+  umbrella header "FrenchToast-umbrella.h"
+
+  export *
+  module * { export * }
+}

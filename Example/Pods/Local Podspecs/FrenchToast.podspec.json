@@ -1,0 +1,22 @@
+{
+  "name": "FrenchToast",
+  "version": "0.1.1",
+  "summary": "A short description of FrenchToast.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/mail@alexgivens.com/FrenchToast",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "mail@alexgivens.com": "mail@alexgivens.com"
+  },
+  "source": {
+    "git": "https://github.com/mail@alexgivens.com/FrenchToast.git",
+    "tag": "0.1.1"
+  },
+  "platforms": {
+    "ios": "15.0"
+  },
+  "source_files": "FrenchToast/Classes/**/*"
+}

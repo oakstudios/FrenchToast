@@ -15,6 +15,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		A0E78AF62996CC19005A6740 /* MusicToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E78AF52996CC19005A6740 /* MusicToastView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,13 +40,14 @@
 		607FACE51AFB9204008FA782 /* FrenchToast_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenchToast_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		86540E0D375A3333724C9E2E /* FrenchToast.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = FrenchToast.podspec; path = ../FrenchToast.podspec; sourceTree = "<group>"; };
+		86540E0D375A3333724C9E2E /* FrenchToast.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FrenchToast.podspec; path = ../FrenchToast.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8A4F6749C2616EE53ABAD2E0 /* Pods-FrenchToast_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrenchToast_Example.debug.xcconfig"; path = "Target Support Files/Pods-FrenchToast_Example/Pods-FrenchToast_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8F83CC2ACBFA27B9C0C5A7DE /* Pods_FrenchToast_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrenchToast_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0E78AF52996CC19005A6740 /* MusicToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicToastView.swift; sourceTree = "<group>"; };
 		A9537BE9D9A112B87FC94365 /* Pods-FrenchToast_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrenchToast_Example.release.xcconfig"; path = "Target Support Files/Pods-FrenchToast_Example/Pods-FrenchToast_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C184F7B168E9963ADCCFE308 /* Pods-FrenchToast_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrenchToast_Tests.release.xcconfig"; path = "Target Support Files/Pods-FrenchToast_Tests/Pods-FrenchToast_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C27DB92C204345031AAF4FC0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		D406EC83315DC374193F8EC9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C27DB92C204345031AAF4FC0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D406EC83315DC374193F8EC9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FB99816F5D1DAF077DF49A10 /* Pods-FrenchToast_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrenchToast_Tests.debug.xcconfig"; path = "Target Support Files/Pods-FrenchToast_Tests/Pods-FrenchToast_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				A0E78AF52996CC19005A6740 /* MusicToastView.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -147,7 +150,6 @@
 				FB99816F5D1DAF077DF49A10 /* Pods-FrenchToast_Tests.debug.xcconfig */,
 				C184F7B168E9963ADCCFE308 /* Pods-FrenchToast_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,10 +215,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = B34U9MBMKJ;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = B34U9MBMKJ;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -227,6 +231,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -333,6 +338,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				A0E78AF62996CC19005A6740 /* MusicToastView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,7 +484,9 @@
 			baseConfigurationReference = 8A4F6749C2616EE53ABAD2E0 /* Pods-FrenchToast_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B34U9MBMKJ;
 				INFOPLIST_FILE = FrenchToast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -493,7 +501,9 @@
 			baseConfigurationReference = A9537BE9D9A112B87FC94365 /* Pods-FrenchToast_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B34U9MBMKJ;
 				INFOPLIST_FILE = FrenchToast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -507,6 +517,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB99816F5D1DAF077DF49A10 /* Pods-FrenchToast_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = B34U9MBMKJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -516,6 +527,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -529,11 +541,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C184F7B168E9963ADCCFE308 /* Pods-FrenchToast_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = B34U9MBMKJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
