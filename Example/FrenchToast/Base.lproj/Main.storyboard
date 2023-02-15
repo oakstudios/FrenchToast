@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -70,8 +71,8 @@
                                     <segment title="Music"/>
                                 </segments>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVR-xa-Glr">
-                                <rect key="frame" x="131" y="462" width="112" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVR-xa-Glr">
+                                <rect key="frame" x="159" y="448.66666666666669" width="112" height="35"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -87,10 +88,14 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3B-ef-qJ3">
                                 <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="i0T-5p-Yuz"/>
+                                    <navigationItem title="French Toast" id="i0T-5p-Yuz"/>
                                 </items>
                                 <navigationBarAppearance key="scrollEdgeAppearance"/>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mtx-ky-j0M">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="59"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -108,7 +113,9 @@
                             <constraint firstItem="cff-KZ-dgm" firstAttribute="leading" secondItem="NKT-nQ-H1Z" secondAttribute="leading" id="NFs-fy-Csv"/>
                             <constraint firstItem="K7Q-Pa-UQf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="NdV-gB-BRr"/>
                             <constraint firstAttribute="trailing" secondItem="e3B-ef-qJ3" secondAttribute="trailing" id="OKE-66-yGm"/>
+                            <constraint firstItem="e3B-ef-qJ3" firstAttribute="top" secondItem="mtx-ky-j0M" secondAttribute="bottom" id="PuN-4R-y1A"/>
                             <constraint firstItem="ZpQ-pQ-4As" firstAttribute="trailing" secondItem="t3O-tA-xcA" secondAttribute="trailing" id="UYB-0k-UdR"/>
+                            <constraint firstItem="mtx-ky-j0M" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="YRW-dn-DyK"/>
                             <constraint firstItem="t3O-tA-xcA" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="cIF-fr-jxc"/>
                             <constraint firstItem="NKT-nQ-H1Z" firstAttribute="leading" secondItem="t3O-tA-xcA" secondAttribute="leading" id="gtC-8R-a3l"/>
                             <constraint firstItem="1vm-Fe-eVx" firstAttribute="leading" secondItem="ZpQ-pQ-4As" secondAttribute="leading" id="iKd-TT-ttC"/>
@@ -117,6 +124,8 @@
                             <constraint firstItem="RVR-xa-Glr" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="lVH-C2-A3b"/>
                             <constraint firstItem="t3O-tA-xcA" firstAttribute="top" secondItem="aAr-rX-yrb" secondAttribute="bottom" constant="4" id="mDO-2D-oew"/>
                             <constraint firstItem="e3B-ef-qJ3" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="me5-9I-i7v"/>
+                            <constraint firstItem="mtx-ky-j0M" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="qDY-Hb-9WI"/>
+                            <constraint firstAttribute="trailing" secondItem="mtx-ky-j0M" secondAttribute="trailing" id="trm-UU-civ"/>
                             <constraint firstItem="aAr-rX-yrb" firstAttribute="top" secondItem="ZpQ-pQ-4As" secondAttribute="bottom" constant="16" id="ttP-Hf-u5u"/>
                             <constraint firstAttribute="trailing" secondItem="K7Q-Pa-UQf" secondAttribute="trailing" id="u1o-Mu-d2X"/>
                         </constraints>
@@ -130,7 +139,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-162.40000000000001" y="-36.431784107946029"/>
+            <point key="canvasLocation" x="-163.25581395348837" y="-36.695278969957087"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
