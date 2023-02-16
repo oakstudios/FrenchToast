@@ -14,9 +14,7 @@ public class DefaultToastView: UIView, ToastView {
     public var duration: TimeInterval = ToastManager.shared.duration
     
     public var position: ToastPosition = ToastManager.shared.position
-    
-    public var isCollapsable: Bool = ToastManager.shared.isCollapsible
-    
+        
     public var traitCollectionDidChangePassthrough: ((UITraitCollection?) -> Void)?
     
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {

@@ -101,13 +101,13 @@ public extension UIView {
     
     var toastConfiguration: ToastConfiguration? {
         get {
-            if let activeToasts = objc_getAssociatedObject(self, &ToastKeys.activeToasts) as? NSMutableArray {
-                return activeToasts
-            } else {
-                let activeToasts = NSMutableArray()
-                objc_setAssociatedObject(self, &ToastKeys.activeToasts, activeToasts, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-                return activeToasts
+            if let configuration = objc_getAssociatedObject(self, &ToastKeys.configuration) as? ToastConfiguration {
+                return configuration
             }
+            return nil
+        }
+        set {
+            objc_setAssociatedObject(self, &ToastKeys.configuration, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
@@ -194,12 +194,18 @@ public extension UIView {
      didTap will be `true` if the toast view was dismissed from a tap.
      */
     func showToast(_ toast: ToastView, didTap: (() -> Void)? = nil, completion: ((_ didTap: Bool) -> Void)? = nil) {
-        let point = toast.position.centerPoint(forToast: toast, inSuperview: self)
+        let point = toast.alignment.centerPoint(forToast: toast, inSuperView: self)
         showToast(toast, duration: toast.duration, point: point, didTap: didTap, completion: completion)
     }
     
     func clearDidTap(for toast: UIView) {
         objc_setAssociatedObject(toast, &ToastKeys.didTap, nil, .OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    
+    var alignment: FTAlignment {
+        let horizontal = self.toastConfiguration?.horizontalAlignment ?? ToastConfiguration.sharedDefault.horizontalAlignment
+        let vertical = self.toastConfiguration?.verticalAlignment ?? ToastConfiguration.sharedDefault.verticalAlignment
+        return FTAlignment(horizontal: horizontal, vertical: vertical)
     }
     
     // position: ToastPosition = ToastManager.shared.position,

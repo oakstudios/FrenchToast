@@ -16,9 +16,7 @@ class MusicToastView: UIView, ToastView {
     public var duration: TimeInterval = 0.0 // Indefinite
     
     public var position: ToastPosition = ToastManager.shared.position
-    
-    public var isCollapsable: Bool = ToastManager.shared.isCollapsible
-    
+        
     public var traitCollectionDidChangePassthrough: ((UITraitCollection?) -> Void)?
     
     let imageView: UIImageView = {

@@ -47,36 +47,42 @@ class ViewController: UIViewController {
         let size = CGSize(width: width, height: height)
         let frame = CGRect(origin: .zero, size: size)
         
-        var toastView: ToastView!
+        var configuration = ToastConfiguration()
+        
+        switch durationSegmentedControl.selectedSegmentIndex {
+        case 0: configuration.duration = .definite(3)
+        default: configuration.duration = .indefinite
+        }
+        
+        switch positionSegmentedControl.selectedSegmentIndex {
+        case 0: configuration.verticalAlignment = .top
+        case 1: configuration.verticalAlignment = .center
+        default: configuration.verticalAlignment = .bottom
+        }
         
         switch toastStyleSegmentedControl.selectedSegmentIndex {
+            
         case 0:
+            
             let defaultToastView = DefaultToastView(frame: frame)
+            defaultToastView.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
+            defaultToastView.toastConfiguration = configuration
             defaultToastView.backgroundColor = .orange
-            toastView = defaultToastView
+            return defaultToastView
+            
         default:
+            
             let musicToastView = MusicToastView(frame: frame)
+            musicToastView.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
+            musicToastView.toastConfiguration = configuration
             musicToastView.imageView.image = UIImage(named: "MUNA")
             musicToastView.titleLabel.text = "Silk Chiffon"
             musicToastView.subtitleLabel.text = "MUNA, Phoebe Bridgers"
             musicToastView.progressView.progress = 0.25
-            toastView = musicToastView
+            return musicToastView
+            
         }
-        
-        toastView.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
-        
-        switch durationSegmentedControl.selectedSegmentIndex {
-        case 0: toastView.duration = 3
-        default: toastView.duration = 0
-        }
-        
-        switch positionSegmentedControl.selectedSegmentIndex {
-        case 0: toastView.position = .top
-        case 1: toastView.position = .center
-        default: toastView.position = .bottom
-        }
-        
-        return toastView
+
     }
 
 }
