@@ -41,7 +41,7 @@ public enum FTHorizontalAlignment: Int {
             
             var rightInset = toast.toastConfiguration?.horizontalMargin ?? ToastConfiguration.sharedDefault.horizontalMargin
             rightInset += superview.safeAreaInsets.right
-            return rightInset + (toast.frame.size.width / 2.0)
+            return superview.bounds.size.width - rightInset - (toast.frame.size.width / 2.0)
             
         case .center:
             
@@ -51,7 +51,7 @@ public enum FTHorizontalAlignment: Int {
                     
             var leftInset = toast.toastConfiguration?.horizontalMargin ?? ToastConfiguration.sharedDefault.horizontalMargin
             leftInset += superview.safeAreaInsets.left
-            return superview.bounds.size.width - (toast.frame.size.width / 2.0) - leftInset
+            return (toast.frame.size.width / 2.0) + leftInset
             
         }
     }
@@ -66,6 +66,8 @@ public enum FTVerticalAlignment: Int {
     
     public func coordinate(forToast toast: UIView, inSuperview superview: UIView) -> Double {
         
+        let appearOverTopAndBottomBars = toast.toastConfiguration?.appearOverTopAndBottomBars ?? true
+        
         switch self {
             
         case .top:
@@ -76,6 +78,7 @@ public enum FTVerticalAlignment: Int {
                 let navBar = superview.traverseSubviewsAndFindType(type: UINavigationBar.self),
                 navBar.isHidden == false
             {
+                topInset += superview.safeAreaInsets.top
                 topInset += navBar.frame.maxY
             } else {
                 topInset += superview.safeAreaInsets.top
@@ -105,82 +108,84 @@ public enum FTVerticalAlignment: Int {
                 bottomInset += superview.safeAreaInsets.bottom
             }
                                                     
-            return bottomInset
+            return superview.bounds.height - bottomInset
             
         }
     }
     
 }
 
-public enum ToastPosition {
-    
-    case top
-    case center
-    case bottom
-    
-    public func centerPoint(forToast toast: UIView, inSuperview superview: UIView) -> CGPoint {
-        
-        switch self {
-            
-        case .top:
-            let alignment = FTAlignment(horizontal: .center, vertical: .bottom)
-            var topPadding: CGFloat = ToastManager.shared.style.verticalPadding
-            
-            if
-                let navBar = superview.traverseSubviewsAndFindType(type: UINavigationBar.self),
-                navBar.isHidden == false
-            {
-                topPadding += navBar.frame.maxY
-            } else {
-                topPadding += superview.safeAreaInsets.top
-            }
-            
-            let x = superview.bounds.size.width / 2.0
-            let y = (toast.frame.size.height / 2.0) + topPadding
-            
-            return CGPoint(x: x, y: y)
-            
-        case .center:
-            
-            return CGPoint(x: superview.bounds.size.width / 2.0, y: superview.bounds.size.height / 2.0)
-            
-        case .bottom:
-                    
-            var bottomPadding: CGFloat = ToastManager.shared.style.verticalPadding
-                        
-            if
-                let tabBar = superview.traverseSubviewsAndFindType(type: UITabBar.self),
-                tabBar.isHidden == false
-            {
-                bottomPadding += (superview.bounds.size.height - tabBar.frame.minY)
-            } else if
-                let toolbar = superview.traverseSubviewsAndFindType(type: UITabBar.self),
-                toolbar.isHidden == false
-            {
-                bottomPadding += (superview.bounds.size.height - toolbar.frame.minY)
-            } else {
-                bottomPadding += superview.safeAreaInsets.bottom
-            }
-                                                    
-            // Center the toast by default
-            var x = superview.bounds.size.width / 2.0
-            if // In landscape / regular class sizes, pin to the right
-                superview.traitCollection.horizontalSizeClass != .compact
-//                let screenBounds = superview.window?.windowScene?.screen.bounds,
-//                screenBounds.width > screenBounds.height
-            {
-                var horizontalMargin: CGFloat = 24
-                let rightInset = superview.safeAreaInsets.right
-                if rightInset > 0 {
-                    horizontalMargin = rightInset
-                }
-                x = superview.bounds.size.width - (toast.frame.size.width / 2.0) - horizontalMargin
-            }
-
-            let y = (superview.bounds.size.height - (toast.frame.size.height / 2.0)) - bottomPadding
-                    
-            return CGPoint(x: x, y: y)
-            
-        }
-    }
-}
+//public enum ToastPosition {
+//
+//    case top
+//    case center
+//    case bottom
+//
+//    public func centerPoint(forToast toast: UIView, inSuperview superview: UIView) -> CGPoint {
+//
+//        let appearOverTopAndBottomBars = toast.toastConfiguration?.appearOverTopAndBottomBars ?? true
+//
+//        switch self {
+//
+//        case .top:
+//            let alignment = FTAlignment(horizontal: .center, vertical: .bottom)
+//            var topPadding: CGFloat = ToastManager.shared.style.verticalPadding
+//
+//            if
+//                let navBar = superview.traverseSubviewsAndFindType(type: UINavigationBar.self),
+//                navBar.isHidden == false
+//            {
+//                topPadding += navBar.frame.maxY
+//            } else {
+//                topPadding += superview.safeAreaInsets.top
+//            }
+//
+//            let x = superview.bounds.size.width / 2.0
+//            let y = (toast.frame.size.height / 2.0) + topPadding
+//
+//            return CGPoint(x: x, y: y)
+//
+//        case .center:
+//
+//            return CGPoint(x: superview.bounds.size.width / 2.0, y: superview.bounds.size.height / 2.0)
+//
+//        case .bottom:
+//
+//            var bottomPadding: CGFloat = ToastManager.shared.style.verticalPadding
+//
+//            if
+//                let tabBar = superview.traverseSubviewsAndFindType(type: UITabBar.self),
+//                tabBar.isHidden == false
+//            {
+//                bottomPadding += (superview.bounds.size.height - tabBar.frame.minY)
+//            } else if
+//                let toolbar = superview.traverseSubviewsAndFindType(type: UITabBar.self),
+//                toolbar.isHidden == false
+//            {
+//                bottomPadding += (superview.bounds.size.height - toolbar.frame.minY)
+//            } else {
+//                bottomPadding += superview.safeAreaInsets.bottom
+//            }
+//
+//            // Center the toast by default
+//            var x = superview.bounds.size.width / 2.0
+//            if // In landscape / regular class sizes, pin to the right
+//                superview.traitCollection.horizontalSizeClass != .compact
+////                let screenBounds = superview.window?.windowScene?.screen.bounds,
+////                screenBounds.width > screenBounds.height
+//            {
+//                var horizontalMargin: CGFloat = 24
+//                let rightInset = superview.safeAreaInsets.right
+//                if rightInset > 0 {
+//                    horizontalMargin = rightInset
+//                }
+//                x = superview.bounds.size.width - (toast.frame.size.width / 2.0) - horizontalMargin
+//            }
+//
+//            let y = (superview.bounds.size.height - (toast.frame.size.height / 2.0)) - bottomPadding
+//
+//            return CGPoint(x: x, y: y)
+//
+//        }
+//    }
+//}

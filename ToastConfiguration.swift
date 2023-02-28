@@ -60,7 +60,11 @@ public struct ToastConfiguration {
     
     public var verticalAlignment: FTVerticalAlignment = .bottom
 
-    public var alignment: FTAlignment = FTAlignment(horizontal: .center, vertical: .bottom)
+//    public var alignment: FTAlignment = FTAlignment(horizontal: .center, vertical: .bottom)
+    
+    public var alignment: FTAlignment {
+        return FTAlignment(horizontal: horizontalAlignment, vertical: verticalAlignment)
+    }
     
     public var appearOverTopAndBottomBars = true
     

@@ -15,7 +15,7 @@ class MusicToastView: UIView, ToastView {
     
     public var duration: TimeInterval = 0.0 // Indefinite
     
-    public var position: ToastPosition = ToastManager.shared.position
+//    public var position: ToastPosition = ToastManager.shared.position
         
     public var traitCollectionDidChangePassthrough: ((UITraitCollection?) -> Void)?
     

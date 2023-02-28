@@ -11,9 +11,9 @@ public class DefaultToastView: UIView, ToastView {
     
     public let identifier = "DefaultToast.identifier"
     
-    public var duration: TimeInterval = ToastManager.shared.duration
+//    public var duration: TimeInterval = ToastManager.shared.duration
     
-    public var position: ToastPosition = ToastManager.shared.position
+//    public var position: ToastPosition = ToastManager.shared.position
         
     public var traitCollectionDidChangePassthrough: ((UITraitCollection?) -> Void)?
     

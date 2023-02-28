@@ -24,7 +24,7 @@ public class ToastManager {
      with with a nil style.
      
      */
-    public var style = ToastStyle()
+//    public var style = ToastStyle()
     
     /**
      Enables or disables tap to dismiss on toast views. Default is `true`.
@@ -48,7 +48,7 @@ public class ToastManager {
      Default is 3.0.
      
      */
-    public var duration: TimeInterval = 3.0
+//    public var duration: TimeInterval = 3.0
     
     /**
      Sets the default position. Used for the `makeToast` and
@@ -56,6 +56,6 @@ public class ToastManager {
      Default is `ToastPosition.Bottom`.
      
      */
-    public var position: ToastPosition = .bottom
+//    public var position: ToastPosition = .bottom
         
 }

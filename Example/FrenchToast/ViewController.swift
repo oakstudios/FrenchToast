@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var toastStyleSegmentedControl: UISegmentedControl!
     @IBOutlet weak var durationSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var positionSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var horizontalSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var verticalSegmentedControl: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +55,13 @@ class ViewController: UIViewController {
         default: configuration.duration = .indefinite
         }
         
-        switch positionSegmentedControl.selectedSegmentIndex {
+        switch horizontalSegmentedControl.selectedSegmentIndex {
+        case 0: configuration.horizontalAlignment = .left
+        case 1: configuration.horizontalAlignment = .center
+        default: configuration.horizontalAlignment = .right
+        }
+        
+        switch verticalSegmentedControl.selectedSegmentIndex {
         case 0: configuration.verticalAlignment = .top
         case 1: configuration.verticalAlignment = .center
         default: configuration.verticalAlignment = .bottom
@@ -82,7 +89,18 @@ class ViewController: UIViewController {
             return musicToastView
             
         }
-
+        
+    }
+    
+    var menuItems: [UIAction] {
+        return [
+            UIAction(title: "Standard item", image: UIImage(systemName: "sun.max"), handler: { (_) in
+            }),
+            UIAction(title: "Disabled item", image: UIImage(systemName: "moon"), attributes: .disabled, handler: { (_) in
+            }),
+            UIAction(title: "Delete..", image: UIImage(systemName: "trash"), attributes: .destructive, handler: { (_) in
+            })
+        ]
     }
 
 }
