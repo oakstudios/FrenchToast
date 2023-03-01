@@ -56,14 +56,12 @@ public struct ToastConfiguration {
      */
     public var isTapToDismissEnabled = true
     
-    public var horizontalAlignment: FTHorizontalAlignment = .center
+    public var horizontalAlignment: ToastHorizontalAlignment = .center
     
-    public var verticalAlignment: FTVerticalAlignment = .bottom
-
-//    public var alignment: FTAlignment = FTAlignment(horizontal: .center, vertical: .bottom)
+    public var verticalAlignment: ToastVerticalAlignment = .bottom
     
-    public var alignment: FTAlignment {
-        return FTAlignment(horizontal: horizontalAlignment, vertical: verticalAlignment)
+    public var alignment: ToastAlignment {
+        return ToastAlignment(horizontal: horizontalAlignment, vertical: verticalAlignment)
     }
     
     public var appearOverTopAndBottomBars = true

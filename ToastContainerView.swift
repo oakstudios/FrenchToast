@@ -10,11 +10,11 @@ import UIKit
 /**
  `ToastContainerView` is used to draw the toast inside for animation, as well as identifying frame changes.
 */
-class ToastContainerView: UIView {
+public class ToastContainerView: UIView {
     
     var shouldRedrawFrame: (() -> Void)?
         
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         shouldRedrawFrame?()
     }
@@ -24,7 +24,7 @@ class ToastContainerView: UIView {
         shouldRedrawFrame?()
     }
     
-    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+    public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         return nil
     }
     

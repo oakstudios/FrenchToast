@@ -10,14 +10,8 @@ import UIKit
 import FrenchToast
 
 class MusicToastView: UIView, ToastView {
-    
-    public let identifier = "MusicToast.identifier"
-    
-    public var duration: TimeInterval = 0.0 // Indefinite
-    
-//    public var position: ToastPosition = ToastManager.shared.position
         
-    public var traitCollectionDidChangePassthrough: ((UITraitCollection?) -> Void)?
+    public var layoutDidChangePassthrough: ((UITraitCollection?) -> Void)?
     
     let imageView: UIImageView = {
         let imageView = UIImageView()
@@ -119,12 +113,12 @@ class MusicToastView: UIView, ToastView {
     
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        self.traitCollectionDidChangePassthrough?(previousTraitCollection)
+        self.layoutDidChangePassthrough?(previousTraitCollection)
     }
     
     public override func layoutSubviews() {
         super.layoutSubviews()
-        self.traitCollectionDidChangePassthrough?(nil)
+        self.layoutDidChangePassthrough?(nil)
     }
     
 }

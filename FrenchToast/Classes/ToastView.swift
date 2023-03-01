@@ -8,8 +8,5 @@
 import UIKit
 
 public protocol ToastView : UIView {
-    var identifier: String { get }
-//    var duration: TimeInterval { get set }
-//    var position: ToastPosition { get set }
-    var traitCollectionDidChangePassthrough: ((UITraitCollection?) -> Void)? { get set }
+    var layoutDidChangePassthrough: ((UITraitCollection?) -> Void)? { get set }
 }

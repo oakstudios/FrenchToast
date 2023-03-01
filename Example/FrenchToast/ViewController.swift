@@ -35,20 +35,25 @@ class ViewController: UIViewController {
     }
     
     func createToastView() -> ToastView {
-        let horizontalPadding: CGFloat = 8
+        
         var width: CGFloat = 400
         var height: CGFloat = 64
+        
         if
             UIDevice.current.userInterfaceIdiom == .phone,
             let bounds = view.window?.windowScene?.screen.bounds
         {
-            width = min(bounds.width, bounds.height) - (horizontalPadding * 2) - (16 / 2)
+            let horizontalPadding: CGFloat = 10
+            width = min(bounds.width, bounds.height) - (horizontalPadding * 2)
             height = 48
         }
+        
         let size = CGSize(width: width, height: height)
         let frame = CGRect(origin: .zero, size: size)
         
         var configuration = ToastConfiguration()
+        configuration.horizontalMargin = 32
+        configuration.verticalMargin = 32
         
         switch durationSegmentedControl.selectedSegmentIndex {
         case 0: configuration.duration = .definite(3)
@@ -78,7 +83,7 @@ class ViewController: UIViewController {
             return defaultToastView
             
         default:
-            
+                        
             let musicToastView = MusicToastView(frame: frame)
             musicToastView.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
             musicToastView.toastConfiguration = configuration
