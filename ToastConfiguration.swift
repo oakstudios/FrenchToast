@@ -28,7 +28,10 @@ public struct ToastConfiguration {
     public static let sharedDefault = ToastConfiguration()
     
     
-    public var horizontalMargin: CGFloat = 10.0
+//    public var horizontalMargin: CGFloat = 10.0
+    
+    public var horizontalMarginForCompactSizeClass: CGFloat = 12.0
+    public var horizontalMarginForRegularSizeClass: CGFloat = 24.0
     
     /**
      The spacing from the vertical edge of the toast view to the content. When a title
@@ -36,7 +39,10 @@ public struct ToastConfiguration {
      Default is 10.0. On iOS11+, this value is added added to the `safeAreaInset.top`
      and `safeAreaInsets.bottom`.
     */
-    public var verticalMargin: CGFloat = 10.0
+//    public var verticalMargin: CGFloat = 10.0
+    
+    public var verticalMarginForCompactSizeClass: CGFloat = 12.0
+    public var verticalMarginForRegularSizeClass: CGFloat = 24.0
     
     /**
      The default duration. Used for the `makeToast` and
@@ -56,14 +62,58 @@ public struct ToastConfiguration {
      */
     public var isTapToDismissEnabled = true
     
+    // Size
+    
+    public var adjustWidthForCompactSizeClass = true
+    
+    public var suggestedSizeForCompactSizeClass = CGSize(width: 350, height: 48)
+    
+    public var suggestedSizeForRegularSizeClass = CGSize(width: 400, height: 64)
+    
+    // Alignment
+    
+    public var appearOverTopAndBottomBars = true
+    
     public var horizontalAlignment: ToastHorizontalAlignment = .center
     
     public var verticalAlignment: ToastVerticalAlignment = .bottom
     
-    public var alignment: ToastAlignment {
-        return ToastAlignment(horizontal: horizontalAlignment, vertical: verticalAlignment)
+}
+
+extension ToastConfiguration {
+    
+    func frame(forToast toast: UIView, inSuperView superview: UIView) -> CGRect {
+        let origin = origin(forToast: toast, inSuperView: superview)
+        let size = size(forToast: toast, inSuperView: superview)
+        return CGRect(origin: origin, size: size)
     }
     
-    public var appearOverTopAndBottomBars = true
+    func origin(forToast toast: UIView, inSuperView superview: UIView) -> CGPoint {
+        
+        let x = horizontalAlignment.originCoordinate(forToast: toast, inSuperview: superview)
+        let y = verticalAlignment.originCoordinate(forToast: toast, inSuperview: superview)
+        return CGPoint(x: x, y: y)
+        
+    }
+    
+    func size(forToast toast: UIView, inSuperView superview: UIView) -> CGSize {
+        
+        if superview.traitCollection.horizontalSizeClass == .compact || superview.traitCollection.verticalSizeClass == .compact {
+            
+            if adjustWidthForCompactSizeClass, superview.traitCollection.horizontalSizeClass == .compact {
+                let adjustedWidth = superview.frame.width - (horizontalMarginForCompactSizeClass * 2) - superview.safeAreaInsets.left - superview.safeAreaInsets.right
+                let adjustedSize = CGSize(width: adjustedWidth, height: suggestedSizeForCompactSizeClass.height)
+                return adjustedSize
+            }
+            
+            return suggestedSizeForCompactSizeClass
+            
+        } else {
+            
+            return suggestedSizeForRegularSizeClass
+            
+        }
+        
+    }
     
 }

@@ -9,10 +9,8 @@
 import UIKit
 import FrenchToast
 
-class MusicToastView: UIView, ToastView {
-        
-    public var layoutDidChangePassthrough: ((UITraitCollection?) -> Void)?
-    
+class MusicToastView: ToastView {
+            
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -73,6 +71,7 @@ class MusicToastView: UIView, ToastView {
     
     func customInit() {
         
+        self.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
         self.layer.cornerRadius = 6
         self.backgroundColor = .darkGray
         
@@ -109,16 +108,6 @@ class MusicToastView: UIView, ToastView {
         bottomAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 1).isActive = true
         progressView.heightAnchor.constraint(equalToConstant: 2).isActive = true
         
-    }
-    
-    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        self.layoutDidChangePassthrough?(previousTraitCollection)
-    }
-    
-    public override func layoutSubviews() {
-        super.layoutSubviews()
-        self.layoutDidChangePassthrough?(nil)
     }
     
 }

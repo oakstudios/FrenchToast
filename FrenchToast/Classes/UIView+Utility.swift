@@ -20,4 +20,8 @@ extension UIView {
         return self.subviews.flatMap { [$0] + $0.allSubviews }
     }
     
+    var isCompact: Bool {
+        return traitCollection.horizontalSizeClass == .compact || traitCollection.verticalSizeClass == .compact
+    }
+    
 }

@@ -73,18 +73,6 @@ public extension UIView {
         }
     }
     
-    var layoutView: ToastContainerView? {
-        get {
-            if let layoutView = objc_getAssociatedObject(self, &ToastKeys.layoutView) as? ToastContainerView {
-                return layoutView
-            }
-            return nil
-        }
-        set {
-            objc_setAssociatedObject(self, &ToastKeys.layoutView, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
-    
     var toastConfiguration: ToastConfiguration? {
         get {
             if let configuration = objc_getAssociatedObject(self, &ToastKeys.configuration) as? ToastConfiguration {
@@ -237,10 +225,13 @@ public extension UIView {
     private func showToast(_ toast: ToastView) {
         
         let configuration = toast.toastConfiguration ?? ToastConfiguration.sharedDefault
-        let point = configuration.alignment.centerPoint(forToast: toast, inSuperView: self)
+        
+//        let point = configuration.alignment.centerPoint(forToast: toast, inSuperView: self)
+        let frame = configuration.frame(forToast: toast, inSuperView: self)
         let duration = configuration.duration
         
-        toast.center = point
+//        toast.center = point
+        toast.frame = frame
         toast.alpha = 0.0
         
         if configuration.isTapToDismissEnabled {
@@ -251,7 +242,8 @@ public extension UIView {
         }
         
         toast.layoutDidChangePassthrough = { previousTraitCollection in
-            toast.center = configuration.alignment.centerPoint(forToast: toast, inSuperView: self)
+//            toast.center = configuration.alignment.centerPoint(forToast: toast, inSuperView: self)
+            toast.frame = configuration.frame(forToast: toast, inSuperView: self)
         }
         
         activeToasts.add(toast)

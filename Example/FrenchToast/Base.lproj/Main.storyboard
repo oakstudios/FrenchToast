@@ -70,11 +70,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="NKT-nQ-H1Z">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NKT-nQ-H1Z">
                                 <rect key="frame" x="75" y="182.66666666666666" width="280" height="32"/>
                                 <segments>
-                                    <segment title="Simple"/>
-                                    <segment title="Bulk Action"/>
+                                    <segment title="Notification"/>
+                                    <segment title="Utility"/>
                                     <segment title="Music"/>
                                 </segments>
                             </segmentedControl>
@@ -103,7 +103,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="59"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="nll-Ea-BEK">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="nll-Ea-BEK">
                                 <rect key="frame" x="75" y="318.66666666666669" width="280" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="hyL-3v-eSz"/>

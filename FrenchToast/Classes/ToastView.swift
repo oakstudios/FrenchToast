@@ -7,6 +7,19 @@
 
 import UIKit
 
-public protocol ToastView : UIView {
-    var layoutDidChangePassthrough: ((UITraitCollection?) -> Void)? { get set }
+
+open class ToastView: UIView {
+    
+    public var layoutDidChangePassthrough: ((UITraitCollection?) -> Void)?
+    
+    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        self.layoutDidChangePassthrough?(previousTraitCollection)
+    }
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        self.layoutDidChangePassthrough?(nil)
+    }
+    
 }

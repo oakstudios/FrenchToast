@@ -10,10 +10,8 @@ import UIKit
 
 import FrenchToast
 
-class BulkActionToastView: UIView, ToastView {
-        
-    public var layoutDidChangePassthrough: ((UITraitCollection?) -> Void)?
-    
+class UtilityToastView: ToastView {
+            
     let innerPadding: CGFloat = 12
     
     let checkbox: CheckBox = {
@@ -90,6 +88,7 @@ class BulkActionToastView: UIView, ToastView {
     
     func customInit() {
         
+        self.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
         self.layer.cornerRadius = 6
         self.backgroundColor = .darkGray
         
@@ -129,7 +128,7 @@ class BulkActionToastView: UIView, ToastView {
     }
     
     func setMenuButtonTitle(_ titleString: String) {
-        let imageConfig = UIImage.SymbolConfiguration(pointSize: 14, weight: .medium, scale: .medium)
+        let imageConfig = UIImage.SymbolConfiguration(pointSize: 12, weight: .medium, scale: .small)
         let image = UIImage(systemName: "arrow.up.and.down", withConfiguration: imageConfig)!.withTintColor(.white.withAlphaComponent(0.4))
         let imageAttachment = NSTextAttachment(image: image)
         let attributes: [NSAttributedString.Key: Any] = [
@@ -140,16 +139,6 @@ class BulkActionToastView: UIView, ToastView {
         let fullString = NSMutableAttributedString(string: "\(titleString)  ", attributes: attributes)
         fullString.append(NSAttributedString(attachment: imageAttachment))
         menuButton.setAttributedTitle(fullString, for: .normal)
-    }
-    
-    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        self.layoutDidChangePassthrough?(previousTraitCollection)
-    }
-    
-    public override func layoutSubviews() {
-        super.layoutSubviews()
-        self.layoutDidChangePassthrough?(nil)
     }
     
     // MARK: Checkbox
@@ -166,7 +155,7 @@ class BulkActionToastView: UIView, ToastView {
         }
             
         // Bool property
-        var isChecked: Bool = false {
+        var isChecked: Bool = true {
             didSet {
                 if isChecked == true {
                     self.setImage(checkedImage, for: .normal)
@@ -189,7 +178,7 @@ class BulkActionToastView: UIView, ToastView {
         private func initialize() {
             self.translatesAutoresizingMaskIntoConstraints = false
             self.addTarget(self, action:#selector(buttonClicked(sender:)), for: UIControl.Event.touchUpInside)
-            self.isChecked = false
+            self.isChecked = true
             self.tintColor = .white
         }
             

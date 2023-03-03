@@ -36,24 +36,7 @@ class ViewController: UIViewController {
     
     func createToastView() -> ToastView {
         
-        var width: CGFloat = 400
-        var height: CGFloat = 64
-        
-        if
-            UIDevice.current.userInterfaceIdiom == .phone,
-            let bounds = view.window?.windowScene?.screen.bounds
-        {
-            let horizontalPadding: CGFloat = 10
-            width = min(bounds.width, bounds.height) - (horizontalPadding * 2)
-            height = 48
-        }
-        
-        let size = CGSize(width: width, height: height)
-        let frame = CGRect(origin: .zero, size: size)
-        
         var configuration = ToastConfiguration()
-        configuration.horizontalMargin = 10
-        configuration.verticalMargin = 10
         
         switch durationSegmentedControl.selectedSegmentIndex {
         case 0: configuration.duration = .definite(3)
@@ -76,25 +59,35 @@ class ViewController: UIViewController {
             
         case 0:
             
-            let defaultToastView = DefaultToastView(frame: frame)
-            defaultToastView.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
-            defaultToastView.toastConfiguration = configuration
-            defaultToastView.backgroundColor = .orange
-            return defaultToastView
+            let notificationToastView = NotificationToastView()
+            notificationToastView.toastConfiguration = configuration
+            
+            // Offline
+            notificationToastView.backgroundColor = .red
+            let imageConfig = UIImage.SymbolConfiguration(pointSize: 22, weight: .medium, scale: .medium)
+            let image = UIImage(systemName: "icloud.slash", withConfiguration: imageConfig)
+            notificationToastView.imageView.image = image
+            notificationToastView.titleLabel.text = "You're offline"
+            notificationToastView.actionButton.setTitle("Retry", for: .normal)
+            
+            return notificationToastView
             
         case 1:
-            let largeSize = CGSize(width: frame.width, height: 64)
-            let largeFrame = CGRect(origin: .zero, size: largeSize)
-            let bulkActionToastView = BulkActionToastView(frame: largeFrame)
-            bulkActionToastView.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
-            bulkActionToastView.toastConfiguration = configuration
-            bulkActionToastView.titleLabel.text = "3 selected"
-            return bulkActionToastView
+            
+            // Maintain larger height for compact view
+            configuration.suggestedSizeForCompactSizeClass = CGSize(width: 400, height: 64)
+            configuration.suggestedSizeForRegularSizeClass = CGSize(width: 500, height: 64)
+            
+            let utilityToastView = UtilityToastView()
+            utilityToastView.toastConfiguration = configuration
+            utilityToastView.titleLabel.text = "3 selected"
+            return utilityToastView
             
         default:
-                        
-            let musicToastView = MusicToastView(frame: frame)
-            musicToastView.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
+            
+            configuration.suggestedSizeForRegularSizeClass = CGSize(width: 550, height: 64)
+            
+            let musicToastView = MusicToastView()
             musicToastView.toastConfiguration = configuration
             musicToastView.imageView.image = UIImage(named: "MUNA")
             musicToastView.titleLabel.text = "Silk Chiffon"
