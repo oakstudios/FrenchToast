@@ -15,6 +15,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		A005FBEA29AFE89700098000 /* BulkActionToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A005FBE929AFE89700098000 /* BulkActionToastView.swift */; };
 		A0E78AF62996CC19005A6740 /* MusicToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E78AF52996CC19005A6740 /* MusicToastView.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		86540E0D375A3333724C9E2E /* FrenchToast.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FrenchToast.podspec; path = ../FrenchToast.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8A4F6749C2616EE53ABAD2E0 /* Pods-FrenchToast_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrenchToast_Example.debug.xcconfig"; path = "Target Support Files/Pods-FrenchToast_Example/Pods-FrenchToast_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8F83CC2ACBFA27B9C0C5A7DE /* Pods_FrenchToast_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrenchToast_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A005FBE929AFE89700098000 /* BulkActionToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulkActionToastView.swift; sourceTree = "<group>"; };
 		A0E78AF52996CC19005A6740 /* MusicToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicToastView.swift; sourceTree = "<group>"; };
 		A9537BE9D9A112B87FC94365 /* Pods-FrenchToast_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrenchToast_Example.release.xcconfig"; path = "Target Support Files/Pods-FrenchToast_Example/Pods-FrenchToast_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C184F7B168E9963ADCCFE308 /* Pods-FrenchToast_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrenchToast_Tests.release.xcconfig"; path = "Target Support Files/Pods-FrenchToast_Tests/Pods-FrenchToast_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				A0E78AF52996CC19005A6740 /* MusicToastView.swift */,
+				A005FBE929AFE89700098000 /* BulkActionToastView.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -338,6 +341,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				A005FBEA29AFE89700098000 /* BulkActionToastView.swift in Sources */,
 				A0E78AF62996CC19005A6740 /* MusicToastView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

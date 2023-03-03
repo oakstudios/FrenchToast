@@ -52,8 +52,8 @@ class ViewController: UIViewController {
         let frame = CGRect(origin: .zero, size: size)
         
         var configuration = ToastConfiguration()
-        configuration.horizontalMargin = 32
-        configuration.verticalMargin = 32
+        configuration.horizontalMargin = 10
+        configuration.verticalMargin = 10
         
         switch durationSegmentedControl.selectedSegmentIndex {
         case 0: configuration.duration = .definite(3)
@@ -82,6 +82,15 @@ class ViewController: UIViewController {
             defaultToastView.backgroundColor = .orange
             return defaultToastView
             
+        case 1:
+            let largeSize = CGSize(width: frame.width, height: 64)
+            let largeFrame = CGRect(origin: .zero, size: largeSize)
+            let bulkActionToastView = BulkActionToastView(frame: largeFrame)
+            bulkActionToastView.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
+            bulkActionToastView.toastConfiguration = configuration
+            bulkActionToastView.titleLabel.text = "3 selected"
+            return bulkActionToastView
+            
         default:
                         
             let musicToastView = MusicToastView(frame: frame)
@@ -95,17 +104,6 @@ class ViewController: UIViewController {
             
         }
         
-    }
-    
-    var menuItems: [UIAction] {
-        return [
-            UIAction(title: "Standard item", image: UIImage(systemName: "sun.max"), handler: { (_) in
-            }),
-            UIAction(title: "Disabled item", image: UIImage(systemName: "moon"), attributes: .disabled, handler: { (_) in
-            }),
-            UIAction(title: "Delete..", image: UIImage(systemName: "trash"), attributes: .destructive, handler: { (_) in
-            })
-        ]
     }
 
 }

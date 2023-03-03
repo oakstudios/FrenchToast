@@ -21,14 +21,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7Q-Pa-UQf">
-                                <rect key="frame" x="0.0" y="849" width="430" height="49"/>
+                                <rect key="frame" x="0.0" y="815" width="430" height="83"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <tabBarItem systemItem="favorites" id="HfF-K0-mHJ"/>
                                     <tabBarItem systemItem="more" id="zrQ-tr-Kya"/>
                                 </items>
                             </tabBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="t3O-tA-xcA">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="t3O-tA-xcA">
                                 <rect key="frame" x="75" y="386.66666666666669" width="280" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="1te-1N-mIi"/>
@@ -39,7 +39,7 @@
                                     <segment title="Bottom"/>
                                 </segments>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZpQ-pQ-4As">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZpQ-pQ-4As">
                                 <rect key="frame" x="75" y="250.66666666666663" width="280" height="32"/>
                                 <segments>
                                     <segment title="Definite (3s)"/>
@@ -70,10 +70,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NKT-nQ-H1Z">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="NKT-nQ-H1Z">
                                 <rect key="frame" x="75" y="182.66666666666666" width="280" height="32"/>
                                 <segments>
                                     <segment title="Simple"/>
+                                    <segment title="Bulk Action"/>
                                     <segment title="Music"/>
                                 </segments>
                             </segmentedControl>
@@ -102,7 +103,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="59"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nll-Ea-BEK">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="nll-Ea-BEK">
                                 <rect key="frame" x="75" y="318.66666666666669" width="280" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="hyL-3v-eSz"/>
