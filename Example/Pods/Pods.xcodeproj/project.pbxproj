@@ -7,82 +7,80 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14A4A445F05681D8866AF03DDD5A5113 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACD6F7E90ADF9413B7A58207C8A8913 /* ToastView.swift */; };
+		125405388CE4B817DB4D63D62D1D7288 /* ToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FD65C7885B0AAA899364B0A04BE8D9 /* ToastManager.swift */; };
+		2B1AE527DB5C315B841986B0EAD3DA5A /* FrenchToast-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F3E54F5CEB1E5287E9F2E66122DABC88 /* FrenchToast-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		452C3C94C799F6A4FAF48F3D29C5AC80 /* ToastDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C875D6EC120E25A00271542085044EB /* ToastDuration.swift */; };
 		4F62C834DB8DC64363B051930138DA8B /* Pods-FrenchToast_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0ABA255CEF422EAC19A5D5D8F380F3 /* Pods-FrenchToast_Tests-dummy.m */; };
-		5A9DB3767D79C78522A60FC66696AC08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		9D51BDB42CB0F8CF45153FDAD0011397 /* FrenchToast-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF590CBC1D599D5A60D33722673DEE66 /* FrenchToast-dummy.m */; };
-		A072C3D5299D3B7600C02238 /* ToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072C3D4299D3B7600C02238 /* ToastManager.swift */; };
-		A072C3D7299D3CDA00C02238 /* ToastStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072C3D6299D3CDA00C02238 /* ToastStyle.swift */; };
-		A072C3D9299D3FCD00C02238 /* ToastConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072C3D8299D3FCD00C02238 /* ToastConfiguration.swift */; };
-		A072C3DB299D428400C02238 /* ToastDuratiion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072C3DA299D428400C02238 /* ToastDuratiion.swift */; };
-		A0E78AFA299AE0A5005A6740 /* ToastAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E78AF9299AE0A5005A6740 /* ToastAlignment.swift */; };
+		7C934CE55CF9EEC41B37CDDB58D7EF40 /* ToastConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F964CE1B0BFC8BD26DE6EBB65CD259 /* ToastConfiguration.swift */; };
+		9464C9074E107CAF3EAC4CEE6E2925C9 /* UIView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE19B79EF80A3D1319EED5621FDCB1C /* UIView+Utility.swift */; };
+		C3BB52EE39CE42B7370D5FF0A4541869 /* ToastAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571231BA90DD1AA49CD02E03DA3F39BC /* ToastAlignment.swift */; };
 		C85AF4FCCB2727553ED6A058DFF68D4D /* Pods-FrenchToast_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAE2E2869505220BDF999FD9E903300 /* Pods-FrenchToast_Example-dummy.m */; };
 		CAB682906E1BD7B04D45731D13984248 /* Pods-FrenchToast_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AC57A0ED765A639938717B0FCFB6F45 /* Pods-FrenchToast_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E378C36494E7887E2059244F6A2A5E92 /* UIView+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEAD1895112A98CDF993607AD576F5D /* UIView+Utility.swift */; };
-		F043D779D1CCD3080EA58E9A08B217B9 /* FrenchToast-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B8869289C4EDD80A944BE2E551026EC9 /* FrenchToast-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4D6D1B49D29D7DE978B277894BDBC26 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4254BD6FB6AA041578B9CE1D2456A5D /* ToastView.swift */; };
+		D8F7489362280A57C9BB1ECA71E7D60A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		EE641C11C64AB84A85B45BBA15700360 /* UIView+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779D1F5EFBE9756D082C2F844043D15E /* UIView+Toast.swift */; };
+		F59CAB36B47575EF7AB0EB99F1658FDF /* FrenchToast-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5121AE68F00A546E4D4884696EB139A3 /* FrenchToast-dummy.m */; };
 		F702D08D82C28404BE9003B85871274B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		FB311ADFF01B44BE2AB85EB8A8781ED6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		FB6B5A2EFA998A206759CC8A24D20826 /* UIView+Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A23F39CD2D277D3D7B7DD916D8FD4D /* UIView+Toast.swift */; };
 		FDDB893295CC5C4E84CCE85C78EB6ED3 /* Pods-FrenchToast_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E80872A6CE161A225FD890144440FF57 /* Pods-FrenchToast_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		30DBB355422E954E50E7D0218B1A7CBD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7580179469F3EAE360236F3B34BB511F;
-			remoteInfo = "Pods-FrenchToast_Example";
-		};
-		31CE58F763062A18BBECF37B2F018F5F /* PBXContainerItemProxy */ = {
+		00B2CDA2DE9CD1EDE062F72153B66FB3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D97C5567E81E4C08A64D1F7F3B8C0A3;
 			remoteInfo = FrenchToast;
 		};
+		6BDC98923727F140BF53170E8EADA680 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7580179469F3EAE360236F3B34BB511F;
+			remoteInfo = "Pods-FrenchToast_Example";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0AC57A0ED765A639938717B0FCFB6F45 /* Pods-FrenchToast_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FrenchToast_Example-umbrella.h"; sourceTree = "<group>"; };
 		1AB47F84C4D12C4F9FAAE9F2CDF6FF76 /* Pods-FrenchToast_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FrenchToast_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		1ACD6F7E90ADF9413B7A58207C8A8913 /* ToastView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastView.swift; path = FrenchToast/Classes/ToastView.swift; sourceTree = "<group>"; };
 		24417CE4489532D95916F05695A782C4 /* Pods-FrenchToast_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FrenchToast_Example.modulemap"; sourceTree = "<group>"; };
-		266DC47A22AC932B965BE9B9B62C0010 /* FrenchToast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FrenchToast.debug.xcconfig; sourceTree = "<group>"; };
 		294C62BA548536AB45C1A3E5B9C5ED08 /* Pods-FrenchToast_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FrenchToast_Example-Info.plist"; sourceTree = "<group>"; };
 		2CE65C9FBAD1F44B60BF689159E8CC23 /* Pods-FrenchToast_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-FrenchToast_Example"; path = Pods_FrenchToast_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32844177FB1B08981DDD819EE889384C /* Pods-FrenchToast_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FrenchToast_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3C875D6EC120E25A00271542085044EB /* ToastDuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastDuration.swift; path = FrenchToast/ToastDuration.swift; sourceTree = "<group>"; };
+		3CA6FB2DC37BB7CC683F004C2CF772B5 /* FrenchToast.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = FrenchToast.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3D1AA4F72BE6F16D9CCB7F1973DBD7A5 /* Pods-FrenchToast_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FrenchToast_Example.release.xcconfig"; sourceTree = "<group>"; };
-		41A23F39CD2D277D3D7B7DD916D8FD4D /* UIView+Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Toast.swift"; path = "FrenchToast/Classes/UIView+Toast.swift"; sourceTree = "<group>"; };
-		485101798038A867B310A040C09455C1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		41EA829EEF4E56FC4C2A2F08600D161B /* FrenchToast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FrenchToast.debug.xcconfig; sourceTree = "<group>"; };
+		4B3A9FF22F376A1084D729A8A372B0AA /* FrenchToast-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FrenchToast-Info.plist"; sourceTree = "<group>"; };
+		5121AE68F00A546E4D4884696EB139A3 /* FrenchToast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FrenchToast-dummy.m"; sourceTree = "<group>"; };
+		571231BA90DD1AA49CD02E03DA3F39BC /* ToastAlignment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastAlignment.swift; path = FrenchToast/ToastAlignment.swift; sourceTree = "<group>"; };
 		59403943370141FE6381A92F761648F0 /* Pods-FrenchToast_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FrenchToast_Tests-Info.plist"; sourceTree = "<group>"; };
+		60F75FB4E561AAA333AF0D9C9F657B65 /* FrenchToast.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FrenchToast.modulemap; sourceTree = "<group>"; };
 		673397C971142CAE97F81DA30C9662E2 /* Pods-FrenchToast_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-FrenchToast_Tests"; path = Pods_FrenchToast_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		728B3657C6835FEA95A950C384155B7A /* FrenchToast */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FrenchToast; path = FrenchToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		740B0FAD3E1EDCA22DE444A6DC8BE5A4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		779D1F5EFBE9756D082C2F844043D15E /* UIView+Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Toast.swift"; path = "FrenchToast/UIView+Toast.swift"; sourceTree = "<group>"; };
 		80B4BE5E260D75E071734DFB07F823B6 /* Pods-FrenchToast_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FrenchToast_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		846B4F5016054A43B00F1A4C67527D2D /* FrenchToast.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = FrenchToast.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		871C1DDE421F7FC2D372C62C0CBE5AED /* FrenchToast.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FrenchToast.modulemap; sourceTree = "<group>"; };
-		89300C985F40EC4EDA44DE8089AAC0A8 /* FrenchToast-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FrenchToast-Info.plist"; sourceTree = "<group>"; };
 		8EA555FFD5F53D0B933B55585A5608D6 /* Pods-FrenchToast_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FrenchToast_Tests.modulemap"; sourceTree = "<group>"; };
 		980AC556885E3180F17FC16AE797BAED /* Pods-FrenchToast_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FrenchToast_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A072C3D4299D3B7600C02238 /* ToastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastManager.swift; sourceTree = "<group>"; };
-		A072C3D6299D3CDA00C02238 /* ToastStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastStyle.swift; sourceTree = "<group>"; };
-		A072C3D8299D3FCD00C02238 /* ToastConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastConfiguration.swift; sourceTree = "<group>"; };
-		A072C3DA299D428400C02238 /* ToastDuratiion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastDuratiion.swift; sourceTree = "<group>"; };
-		A0E78AF9299AE0A5005A6740 /* ToastAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastAlignment.swift; sourceTree = "<group>"; };
-		A71EFAB8881FFA8AD8B2D43252813C5C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		98581C06A0DD4C610B5410CC9E7E6E22 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1FD65C7885B0AAA899364B0A04BE8D9 /* ToastManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastManager.swift; path = FrenchToast/ToastManager.swift; sourceTree = "<group>"; };
 		AA992801EB99AF02287B27E649234C67 /* Pods-FrenchToast_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FrenchToast_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B8869289C4EDD80A944BE2E551026EC9 /* FrenchToast-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FrenchToast-umbrella.h"; sourceTree = "<group>"; };
-		BF976433B4DC72ADFC6FCE3DF970779E /* FrenchToast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FrenchToast-prefix.pch"; sourceTree = "<group>"; };
+		B31EE985F0B2812E53C3B5EC102AEA72 /* FrenchToast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FrenchToast.release.xcconfig; sourceTree = "<group>"; };
+		BBE19B79EF80A3D1319EED5621FDCB1C /* UIView+Utility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Utility.swift"; path = "FrenchToast/UIView+Utility.swift"; sourceTree = "<group>"; };
 		C34086D0E54A3FC08C0DC85A6B07B22B /* Pods-FrenchToast_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FrenchToast_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		CAD6DCC014D1F09119D41A15E05E8662 /* FrenchToast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FrenchToast.release.xcconfig; sourceTree = "<group>"; };
-		CAEAD1895112A98CDF993607AD576F5D /* UIView+Utility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Utility.swift"; path = "FrenchToast/Classes/UIView+Utility.swift"; sourceTree = "<group>"; };
-		DF590CBC1D599D5A60D33722673DEE66 /* FrenchToast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FrenchToast-dummy.m"; sourceTree = "<group>"; };
+		D3F964CE1B0BFC8BD26DE6EBB65CD259 /* ToastConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastConfiguration.swift; path = FrenchToast/ToastConfiguration.swift; sourceTree = "<group>"; };
 		E80872A6CE161A225FD890144440FF57 /* Pods-FrenchToast_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FrenchToast_Tests-umbrella.h"; sourceTree = "<group>"; };
 		E9D3BD0B640D524F256529E776E480F7 /* Pods-FrenchToast_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FrenchToast_Example-frameworks.sh"; sourceTree = "<group>"; };
 		EB0ABA255CEF422EAC19A5D5D8F380F3 /* Pods-FrenchToast_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FrenchToast_Tests-dummy.m"; sourceTree = "<group>"; };
 		F0144C61388BD4FC33077B269D4D0438 /* Pods-FrenchToast_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FrenchToast_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F3E54F5CEB1E5287E9F2E66122DABC88 /* FrenchToast-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FrenchToast-umbrella.h"; sourceTree = "<group>"; };
+		F4254BD6FB6AA041578B9CE1D2456A5D /* ToastView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastView.swift; path = FrenchToast/ToastView.swift; sourceTree = "<group>"; };
+		FA4B1A5CC5CE12EDCD2BDB9FF851CDEA /* FrenchToast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FrenchToast-prefix.pch"; sourceTree = "<group>"; };
 		FCAE2E2869505220BDF999FD9E903300 /* Pods-FrenchToast_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FrenchToast_Example-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,11 +93,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7E22889203EACCF879174D4ECEB7CFFE /* Frameworks */ = {
+		297E4D30D4CB38C9301E6EE93416B946 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A9DB3767D79C78522A60FC66696AC08 /* Foundation.framework in Frameworks */,
+				D8F7489362280A57C9BB1ECA71E7D60A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,25 +112,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		12B5EEBA7D11494FC0C6FBF0D6803576 /* Support Files */ = {
+		16E4E4AF985E1E88825C1E313A5DC606 /* FrenchToast */ = {
 			isa = PBXGroup;
 			children = (
-				871C1DDE421F7FC2D372C62C0CBE5AED /* FrenchToast.modulemap */,
-				DF590CBC1D599D5A60D33722673DEE66 /* FrenchToast-dummy.m */,
-				89300C985F40EC4EDA44DE8089AAC0A8 /* FrenchToast-Info.plist */,
-				BF976433B4DC72ADFC6FCE3DF970779E /* FrenchToast-prefix.pch */,
-				B8869289C4EDD80A944BE2E551026EC9 /* FrenchToast-umbrella.h */,
-				266DC47A22AC932B965BE9B9B62C0010 /* FrenchToast.debug.xcconfig */,
-				CAD6DCC014D1F09119D41A15E05E8662 /* FrenchToast.release.xcconfig */,
+				571231BA90DD1AA49CD02E03DA3F39BC /* ToastAlignment.swift */,
+				D3F964CE1B0BFC8BD26DE6EBB65CD259 /* ToastConfiguration.swift */,
+				3C875D6EC120E25A00271542085044EB /* ToastDuration.swift */,
+				A1FD65C7885B0AAA899364B0A04BE8D9 /* ToastManager.swift */,
+				F4254BD6FB6AA041578B9CE1D2456A5D /* ToastView.swift */,
+				779D1F5EFBE9756D082C2F844043D15E /* UIView+Toast.swift */,
+				BBE19B79EF80A3D1319EED5621FDCB1C /* UIView+Utility.swift */,
+				184C5ACB17AEC4F991C2459DD6993D90 /* Pod */,
+				235AFA035CDDB0CAF64F4724EE6F629D /* Support Files */,
+			);
+			name = FrenchToast;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		184C5ACB17AEC4F991C2459DD6993D90 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				3CA6FB2DC37BB7CC683F004C2CF772B5 /* FrenchToast.podspec */,
+				740B0FAD3E1EDCA22DE444A6DC8BE5A4 /* LICENSE */,
+				98581C06A0DD4C610B5410CC9E7E6E22 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		235AFA035CDDB0CAF64F4724EE6F629D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				60F75FB4E561AAA333AF0D9C9F657B65 /* FrenchToast.modulemap */,
+				5121AE68F00A546E4D4884696EB139A3 /* FrenchToast-dummy.m */,
+				4B3A9FF22F376A1084D729A8A372B0AA /* FrenchToast-Info.plist */,
+				FA4B1A5CC5CE12EDCD2BDB9FF851CDEA /* FrenchToast-prefix.pch */,
+				F3E54F5CEB1E5287E9F2E66122DABC88 /* FrenchToast-umbrella.h */,
+				41EA829EEF4E56FC4C2A2F08600D161B /* FrenchToast.debug.xcconfig */,
+				B31EE985F0B2812E53C3B5EC102AEA72 /* FrenchToast.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/FrenchToast";
 			sourceTree = "<group>";
 		};
-		43D37C9B7BA978F92C3230BECF5DD718 /* Development Pods */ = {
+		37EBB4E0473B17E727A3AF9950116AAA /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AE77BCAAAF97CE262A4F4AC157F382C3 /* FrenchToast */,
+				16E4E4AF985E1E88825C1E313A5DC606 /* FrenchToast */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -178,34 +203,6 @@
 			path = "Target Support Files/Pods-FrenchToast_Example";
 			sourceTree = "<group>";
 		};
-		AE77BCAAAF97CE262A4F4AC157F382C3 /* FrenchToast */ = {
-			isa = PBXGroup;
-			children = (
-				1ACD6F7E90ADF9413B7A58207C8A8913 /* ToastView.swift */,
-				41A23F39CD2D277D3D7B7DD916D8FD4D /* UIView+Toast.swift */,
-				A072C3D4299D3B7600C02238 /* ToastManager.swift */,
-				A072C3D6299D3CDA00C02238 /* ToastStyle.swift */,
-				A072C3D8299D3FCD00C02238 /* ToastConfiguration.swift */,
-				A072C3DA299D428400C02238 /* ToastDuratiion.swift */,
-				A0E78AF9299AE0A5005A6740 /* ToastAlignment.swift */,
-				CAEAD1895112A98CDF993607AD576F5D /* UIView+Utility.swift */,
-				CC7F11D8D4178AA8DCDC3E101A7F3511 /* Pod */,
-				12B5EEBA7D11494FC0C6FBF0D6803576 /* Support Files */,
-			);
-			name = FrenchToast;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		CC7F11D8D4178AA8DCDC3E101A7F3511 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				846B4F5016054A43B00F1A4C67527D2D /* FrenchToast.podspec */,
-				485101798038A867B310A040C09455C1 /* LICENSE */,
-				A71EFAB8881FFA8AD8B2D43252813C5C /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		CDF6CA2E48F45CC525C4247E8DFFC0F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				43D37C9B7BA978F92C3230BECF5DD718 /* Development Pods */,
+				37EBB4E0473B17E727A3AF9950116AAA /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				CDF6CA2E48F45CC525C4247E8DFFC0F8 /* Products */,
 				D8661348046A141A50C3A97787847602 /* Targets Support Files */,
@@ -263,11 +260,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		77182414C4F0A60954FF29262E37698E /* Headers */ = {
+		FB682D2DA68F880DEBF8597670C2F4AD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F043D779D1CCD3080EA58E9A08B217B9 /* FrenchToast-umbrella.h in Headers */,
+				2B1AE527DB5C315B841986B0EAD3DA5A /* FrenchToast-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,12 +273,12 @@
 /* Begin PBXNativeTarget section */
 		2D97C5567E81E4C08A64D1F7F3B8C0A3 /* FrenchToast */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 060B9DFF9D7A2E9610D388431E33D3D5 /* Build configuration list for PBXNativeTarget "FrenchToast" */;
+			buildConfigurationList = 03C00A718CBB09846EAA25CFF77E9C8F /* Build configuration list for PBXNativeTarget "FrenchToast" */;
 			buildPhases = (
-				77182414C4F0A60954FF29262E37698E /* Headers */,
-				2D0845F754E59D4E7379C23E5EDFDA91 /* Sources */,
-				7E22889203EACCF879174D4ECEB7CFFE /* Frameworks */,
-				9954BC473587EE57B1A8E67D23A55DF5 /* Resources */,
+				FB682D2DA68F880DEBF8597670C2F4AD /* Headers */,
+				6D79F6D8AFAD5E2406E1B9BAAB7D2372 /* Sources */,
+				297E4D30D4CB38C9301E6EE93416B946 /* Frameworks */,
+				8B100DCBB470D412093EC2E5B413FA71 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -304,7 +301,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				C4B01B3C07CB12CC494E2EAE8D69D312 /* PBXTargetDependency */,
+				3CF0D620EE7695754E80189C0303D50B /* PBXTargetDependency */,
 			);
 			name = "Pods-FrenchToast_Tests";
 			productName = Pods_FrenchToast_Tests;
@@ -323,7 +320,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				DBE3EC3178F4E7E65DF07684C9507B58 /* PBXTargetDependency */,
+				8B8755EA2FC0C8A607E8E8C219A41003 /* PBXTargetDependency */,
 			);
 			name = "Pods-FrenchToast_Example";
 			productName = Pods_FrenchToast_Example;
@@ -360,7 +357,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9954BC473587EE57B1A8E67D23A55DF5 /* Resources */ = {
+		8B100DCBB470D412093EC2E5B413FA71 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -384,27 +381,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2D0845F754E59D4E7379C23E5EDFDA91 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A072C3D9299D3FCD00C02238 /* ToastConfiguration.swift in Sources */,
-				9D51BDB42CB0F8CF45153FDAD0011397 /* FrenchToast-dummy.m in Sources */,
-				A072C3D5299D3B7600C02238 /* ToastManager.swift in Sources */,
-				A0E78AFA299AE0A5005A6740 /* ToastAlignment.swift in Sources */,
-				14A4A445F05681D8866AF03DDD5A5113 /* ToastView.swift in Sources */,
-				A072C3DB299D428400C02238 /* ToastDuratiion.swift in Sources */,
-				FB6B5A2EFA998A206759CC8A24D20826 /* UIView+Toast.swift in Sources */,
-				A072C3D7299D3CDA00C02238 /* ToastStyle.swift in Sources */,
-				E378C36494E7887E2059244F6A2A5E92 /* UIView+Utility.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		539FF50FEAF9BB5AAAF9B54EBA33EFE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4F62C834DB8DC64363B051930138DA8B /* Pods-FrenchToast_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D79F6D8AFAD5E2406E1B9BAAB7D2372 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F59CAB36B47575EF7AB0EB99F1658FDF /* FrenchToast-dummy.m in Sources */,
+				C3BB52EE39CE42B7370D5FF0A4541869 /* ToastAlignment.swift in Sources */,
+				7C934CE55CF9EEC41B37CDDB58D7EF40 /* ToastConfiguration.swift in Sources */,
+				452C3C94C799F6A4FAF48F3D29C5AC80 /* ToastDuration.swift in Sources */,
+				125405388CE4B817DB4D63D62D1D7288 /* ToastManager.swift in Sources */,
+				D4D6D1B49D29D7DE978B277894BDBC26 /* ToastView.swift in Sources */,
+				EE641C11C64AB84A85B45BBA15700360 /* UIView+Toast.swift in Sources */,
+				9464C9074E107CAF3EAC4CEE6E2925C9 /* UIView+Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,17 +415,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C4B01B3C07CB12CC494E2EAE8D69D312 /* PBXTargetDependency */ = {
+		3CF0D620EE7695754E80189C0303D50B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-FrenchToast_Example";
 			target = 7580179469F3EAE360236F3B34BB511F /* Pods-FrenchToast_Example */;
-			targetProxy = 30DBB355422E954E50E7D0218B1A7CBD /* PBXContainerItemProxy */;
+			targetProxy = 6BDC98923727F140BF53170E8EADA680 /* PBXContainerItemProxy */;
 		};
-		DBE3EC3178F4E7E65DF07684C9507B58 /* PBXTargetDependency */ = {
+		8B8755EA2FC0C8A607E8E8C219A41003 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FrenchToast;
 			target = 2D97C5567E81E4C08A64D1F7F3B8C0A3 /* FrenchToast */;
-			targetProxy = 31CE58F763062A18BBECF37B2F018F5F /* PBXContainerItemProxy */;
+			targetProxy = 00B2CDA2DE9CD1EDE062F72153B66FB3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -536,6 +532,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		8DD2C25D347A3203307B9325438DA4C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41EA829EEF4E56FC4C2A2F08600D161B /* FrenchToast.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FrenchToast/FrenchToast-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FrenchToast/FrenchToast-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FrenchToast/FrenchToast.modulemap";
+				PRODUCT_MODULE_NAME = FrenchToast;
+				PRODUCT_NAME = FrenchToast;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -658,7 +686,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -699,41 +728,9 @@
 			};
 			name = Release;
 		};
-		B6E1A47A50F13BC55DF29E3C7BAB866E /* Debug */ = {
+		B786DDCF04643184D5CE5B530C231538 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 266DC47A22AC932B965BE9B9B62C0010 /* FrenchToast.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/FrenchToast/FrenchToast-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FrenchToast/FrenchToast-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FrenchToast/FrenchToast.modulemap";
-				PRODUCT_MODULE_NAME = FrenchToast;
-				PRODUCT_NAME = FrenchToast;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D32C51D66F83CA285C4576346C5E6FE6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAD6DCC014D1F09119D41A15E05E8662 /* FrenchToast.release.xcconfig */;
+			baseConfigurationReference = B31EE985F0B2812E53C3B5EC102AEA72 /* FrenchToast.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -767,11 +764,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		060B9DFF9D7A2E9610D388431E33D3D5 /* Build configuration list for PBXNativeTarget "FrenchToast" */ = {
+		03C00A718CBB09846EAA25CFF77E9C8F /* Build configuration list for PBXNativeTarget "FrenchToast" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B6E1A47A50F13BC55DF29E3C7BAB866E /* Debug */,
-				D32C51D66F83CA285C4576346C5E6FE6 /* Release */,
+				8DD2C25D347A3203307B9325438DA4C2 /* Debug */,
+				B786DDCF04643184D5CE5B530C231538 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

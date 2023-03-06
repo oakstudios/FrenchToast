@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '15.0'
 
-  s.source_files = 'FrenchToast/Classes/**/*'
+  s.source_files = 'FrenchToast/**/*'
   
   # s.resource_bundles = {
   #   'FrenchToast' => ['FrenchToast/Assets/*.png']

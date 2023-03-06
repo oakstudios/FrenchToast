@@ -18,5 +18,5 @@
   "platforms": {
     "ios": "15.0"
   },
-  "source_files": "FrenchToast/Classes/**/*"
+  "source_files": "FrenchToast/**/*"
 }

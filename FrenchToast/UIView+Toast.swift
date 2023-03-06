@@ -134,34 +134,6 @@ public extension UIView {
         objc_setAssociatedObject(toast, &ToastKeys.didTap, nil, .OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     
-    // position: ToastPosition = ToastManager.shared.position,
-    
-    /**
-     Displays any view as toast at a provided center point and duration. The completion closure
-     executes when the toast view completes. `didTap` will be `true` if the toast view was
-     dismissed from a tap.
-     
-     @param toast The view to be displayed as toast
-     @param duration The notification duration
-     @param point The toast's center point
-     @param completion The completion block, executed after the toast view disappears.
-     didTap will be `true` if the toast view was dismissed from a tap.
-     */
-//    func showToast(_ toast: ToastView, duration: ToastDuration, point: CGPoint, didTap: (() -> Void)? = nil, completion: ((_ didTap: Bool) -> Void)? = nil) {
-//
-//        objc_setAssociatedObject(toast, &ToastKeys.didTap, ToastDidTapWrapper(didTap), .OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-//        objc_setAssociatedObject(toast, &ToastKeys.completion, ToastCompletionWrapper(completion), .OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-//
-//        if ToastManager.shared.isQueueEnabled, activeToasts.count > 0 {
-////            objc_setAssociatedObject(toast, &ToastKeys.duration, NSNumber(value: duration), .OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-//            objc_setAssociatedObject(toast, &ToastKeys.point, NSValue(cgPoint: point), .OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-//
-//            queue.add(toast)
-//        } else {
-//            showToast(toast, duration: duration, point: point)
-//        }
-//    }
-    
     // MARK: - Hide Toast Methods
     
     /**
