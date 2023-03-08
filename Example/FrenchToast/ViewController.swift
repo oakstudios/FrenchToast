@@ -1,10 +1,33 @@
 //
 //  ViewController.swift
-//  FrenchToast
 //
-//  Created by mail@alexgivens.com on 02/08/2023.
-//  Copyright (c) 2023 mail@alexgivens.com. All rights reserved.
+//  Copyright (c) 2023 Oak Studios.
 //
+//  Permission is hereby granted, free of charge, to any person obtaining a copy of
+//  this software and associated documentation files (the "Software"), to deal in
+//  the Software without limitation in the rights to use, copy, modify, merge,
+//  publish, distribute, sublicense, and/or sell copies of the Software, and to
+//  permit persons to whom the Software is furnished to do so, subject to the
+//  following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  The Software may not be used in applications and services that are used for or
+//  aid in the exploration, extraction, refinement, processing, or transportation
+//  of fossil fuels.
+//
+//  The Software may not be used by companies that rely on fossil fuel extraction
+//  as their primary means of revenue. This includes but is not limited to the
+//  companies listed at https://climatestrike.software/blocklist
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
 
 import UIKit
 import FrenchToast
@@ -39,7 +62,7 @@ class ViewController: UIViewController {
         var configuration = ToastConfiguration()
         
         switch durationSegmentedControl.selectedSegmentIndex {
-        case 0: configuration.duration = .definite(3)
+        case 0: configuration.duration = .definite(time: 3.0)
         default: configuration.duration = .indefinite
         }
         
@@ -59,13 +82,12 @@ class ViewController: UIViewController {
             
         case 0:
             
-            let notificationToastView = NotificationToastView()
-            notificationToastView.toastConfiguration = configuration
+            let notificationToastView = NotificationToastView(configuration: configuration)
             
             // Offline
             notificationToastView.backgroundColor = .red
-            let imageConfig = UIImage.SymbolConfiguration(pointSize: 22, weight: .medium, scale: .medium)
-            let image = UIImage(systemName: "icloud.slash", withConfiguration: imageConfig)
+            let imageConfiguration = UIImage.SymbolConfiguration(pointSize: 22, weight: .medium, scale: .medium)
+            let image = UIImage(systemName: "icloud.slash", withConfiguration: imageConfiguration)
             notificationToastView.imageView.image = image
             notificationToastView.titleLabel.text = "You're offline"
             notificationToastView.actionButton.setTitle("Retry", for: .normal)
@@ -74,12 +96,11 @@ class ViewController: UIViewController {
             
         case 1:
             
-            // Maintain larger height for compact view
+            // Adjust the sizing for Regular and Compact sizes for larger components
             configuration.suggestedSizeForCompactSizeClass = CGSize(width: 400, height: 64)
-            configuration.suggestedSizeForRegularSizeClass = CGSize(width: 500, height: 64)
+            configuration.suggestedSizeForRegularSizeClass = CGSize(width: 550, height: 64)
             
-            let utilityToastView = UtilityToastView()
-            utilityToastView.toastConfiguration = configuration
+            let utilityToastView = UtilityToastView(configuration: configuration)
             utilityToastView.titleLabel.text = "3 selected"
             return utilityToastView
             
@@ -87,8 +108,7 @@ class ViewController: UIViewController {
             
             configuration.suggestedSizeForRegularSizeClass = CGSize(width: 550, height: 64)
             
-            let musicToastView = MusicToastView()
-            musicToastView.toastConfiguration = configuration
+            let musicToastView = MusicToastView(configuration: configuration)
             musicToastView.imageView.image = UIImage(named: "MUNA")
             musicToastView.titleLabel.text = "Silk Chiffon"
             musicToastView.subtitleLabel.text = "MUNA, Phoebe Bridgers"
