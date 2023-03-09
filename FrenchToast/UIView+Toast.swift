@@ -168,12 +168,11 @@ public extension UIView {
             
         case .definite(let timeInterval):
             
-            
             UIView.animate(withDuration: configuration.fadeDuration, delay: 0.0, options: [.curveEaseOut, .allowUserInteraction], animations: {
                 toast.alpha = 1.0
             }) { _ in
                 let timer = Timer(timeInterval: timeInterval, target: self, selector: #selector(UIView.toastTimerDidFinish(_:)), userInfo: toast, repeats: false)
-                RunLoop.main.add(timer, forMode: .commonModes)
+                RunLoop.main.add(timer, forMode: .common)
                 objc_setAssociatedObject(toast, &ToastKeys.timer, timer, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             }
             
