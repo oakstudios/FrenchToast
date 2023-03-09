@@ -1,22 +1,24 @@
 {
   "name": "FrenchToast",
-  "version": "0.1.1",
-  "summary": "A short description of FrenchToast.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/mail@alexgivens.com/FrenchToast",
+  "version": "1.0.0",
+  "summary": "A Swift framework for the toastiest popups.",
+  "homepage": "https://github.com/oakstudios/FrenchToast",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "mail@alexgivens.com": "mail@alexgivens.com"
+    "Alex Givens": "alex@oak.is"
   },
   "source": {
     "git": "https://github.com/mail@alexgivens.com/FrenchToast.git",
-    "tag": "0.1.1"
+    "tag": "1.0.0"
   },
+  "social_media_url": "https://oak.social/@oak",
   "platforms": {
-    "ios": "15.0"
+    "ios": "13.0"
   },
-  "source_files": "FrenchToast/**/*"
+  "source_files": "FrenchToast/**/*",
+  "swift_versions": "5.0",
+  "swift_version": "5.0"
 }

@@ -1,5 +1,5 @@
 //
-//  ToastDuratiion.swift
+//  ToastDuration.swift
 //
 //  Copyright (c) 2023 Oak Studios.
 //

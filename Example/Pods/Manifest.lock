@@ -1,5 +1,5 @@
 PODS:
-  - FrenchToast (0.1.1)
+  - FrenchToast (1.0.0)
 
 DEPENDENCIES:
   - FrenchToast (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FrenchToast: 378a5c1a16d244aea75a7de7ec48a7c77ff35e9e
+  FrenchToast: a773efdc58f6b10afa8897dd755b1818b3be3ed0
 
-PODFILE CHECKSUM: 5f37ac51901994808a569486c34b0ec9023521e4
+PODFILE CHECKSUM: cb4577f9c8fbeac048adb035995cf673d429d341
 
 COCOAPODS: 1.11.3

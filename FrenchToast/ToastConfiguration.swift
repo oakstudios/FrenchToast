@@ -130,13 +130,13 @@ public struct ToastConfiguration {
 
 extension ToastConfiguration {
     
-    internal func frame(forToast toast: UIView, inSuperView superview: UIView) -> CGRect {
+    internal func frame(forToast toast: ToastView, inSuperView superview: UIView) -> CGRect {
         let origin = origin(forToast: toast, inSuperView: superview)
         let size = size(forToast: toast, inSuperView: superview)
         return CGRect(origin: origin, size: size)
     }
     
-    internal func origin(forToast toast: UIView, inSuperView superview: UIView) -> CGPoint {
+    internal func origin(forToast toast: ToastView, inSuperView superview: UIView) -> CGPoint {
         
         let x = horizontalAlignment.originCoordinate(forToast: toast, inSuperview: superview)
         let y = verticalAlignment.originCoordinate(forToast: toast, inSuperview: superview)
@@ -144,7 +144,7 @@ extension ToastConfiguration {
         
     }
     
-    internal func size(forToast toast: UIView, inSuperView superview: UIView) -> CGSize {
+    internal func size(forToast toast: ToastView, inSuperView superview: UIView) -> CGSize {
         
         if superview.traitCollection.horizontalSizeClass == .compact || superview.traitCollection.verticalSizeClass == .compact {
             

@@ -49,11 +49,8 @@ public extension UIView {
      */
     private struct ToastKeys {
         static var timer        = "com.toast-swift.timer"
-        static var didTap       = "com.toast-swift.didTap"
-        static var completion   = "com.toast-swift.completion"
         static var activeToasts = "com.toast-swift.activeToasts"
         static var queue        = "com.toast-swift.queue"
-        static var configuration = "com.toast-swift.configuration"
     }
     
     /**
@@ -61,33 +58,6 @@ public extension UIView {
      Objective-C runtime, so the (ugly) solution is to wrap them in a
      class that can be used with associated objects.
      */
-    private class ToastCompletionWrapper {
-        let completion: ((Bool) -> Void)?
-        
-        init(_ completion: ((Bool) -> Void)?) {
-            self.completion = completion
-        }
-    }
-    
-    private class ToastDidTapWrapper {
-        let didTap: (() -> Void)?
-        
-        init(_ didTap: (() -> Void)?) {
-            self.didTap = didTap
-        }
-    }
-    
-    var toastConfiguration: ToastConfiguration? {
-        get {
-            if let configuration = objc_getAssociatedObject(self, &ToastKeys.configuration) as? ToastConfiguration {
-                return configuration
-            }
-            return nil
-        }
-        set {
-            objc_setAssociatedObject(self, &ToastKeys.configuration, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-        }
-    }
     
     private var activeToasts: NSMutableArray {
         get {
@@ -112,32 +82,7 @@ public extension UIView {
             }
         }
     }
-    
-    // MARK: - Show Toast Methods
-    
-    /**
-     Displays any view as toast at a provided position and duration. The completion closure
-     executes when the toast view completes. `didTap` will be `true` if the toast view was
-     dismissed from a tap.
-     
-     @param toast The view to be displayed as toast
-     @param duration The notification duration
-     @param position The toast's position
-     @param completion The completion block, executed after the toast view disappears.
-     didTap will be `true` if the toast view was dismissed from a tap.
-     */
-    func showToast(_ toast: ToastView, didTap: (() -> Void)? = nil, completion: ((_ didTap: Bool) -> Void)? = nil) {
-//        let configuration = toast.toastConfiguration ?? ToastConfiguration.sharedDefault
-//        let point = configuration.alignment.centerPoint(forToast: toast, inSuperView: self)
-//        let duration = configuration.duration
-//        showToast(toast, duration: duration, point: point, didTap: didTap, completion: completion)
-        showToast(toast)
-    }
-    
-    func clearDidTap(for toast: UIView) {
-        objc_setAssociatedObject(toast, &ToastKeys.didTap, nil, .OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    }
-    
+        
     // MARK: - Hide Toast Methods
     
     /**
@@ -181,10 +126,6 @@ public extension UIView {
         
         activeToasts.compactMap { $0 as? ToastView }
                     .forEach { hideToast($0) }
-        
-//        if includeActivity {
-//            hideToastActivity()
-//        }
     }
     
     /**
@@ -195,12 +136,10 @@ public extension UIView {
     func clearToastQueue() {
         queue.removeAllObjects()
     }
-    
-    // MARK: - Private Show/Hide Methods
-    
-    private func showToast(_ toast: ToastView) {
         
-        let configuration = toast.toastConfiguration ?? ToastConfiguration.sharedDefault
+    func showToast(_ toast: ToastView) {
+        
+        let configuration = toast.configuration
                 
         toast.frame = configuration.frame(forToast: toast, inSuperView: self)
         toast.alpha = 0.0
@@ -244,7 +183,7 @@ public extension UIView {
     
     private func hideToast(_ toast: ToastView, fromTap: Bool) {
         
-        let configuration = toast.toastConfiguration ?? ToastConfiguration.sharedDefault
+        let configuration = toast.configuration
         
         if let timer = objc_getAssociatedObject(toast, &ToastKeys.timer) as? Timer {
             timer.invalidate()
@@ -256,10 +195,7 @@ public extension UIView {
             toast.removeFromSuperview()
             self.activeToasts.remove(toast)
             
-            if
-                let wrapper = objc_getAssociatedObject(toast, &ToastKeys.completion) as? ToastCompletionWrapper,
-                let completion = wrapper.completion
-            {
+            if let completion = toast.didComplete {
                 completion(fromTap)
             }
             
@@ -276,10 +212,7 @@ public extension UIView {
     @objc private func handleToastTapped(_ recognizer: UITapGestureRecognizer) {
         guard let toast = recognizer.view as? ToastView else { return }
         
-        if
-            let didTapWrapper = objc_getAssociatedObject(toast, &ToastKeys.didTap) as? ToastDidTapWrapper,
-            let didTap = didTapWrapper.didTap
-        {
+        if let didTap = toast.didTap {
             didTap()
         } else {
             hideToast(toast, fromTap: true)
@@ -287,8 +220,7 @@ public extension UIView {
         
     }
     
-    @objc
-    private func toastTimerDidFinish(_ timer: Timer) {
+    @objc private func toastTimerDidFinish(_ timer: Timer) {
         guard let toast = timer.userInfo as? ToastView else { return }
         hideToast(toast)
     }

@@ -42,7 +42,7 @@ open class ToastView: UIView {
     
     public init(configuration: ToastConfiguration) {
         super.init(frame: .zero)
-        self.toastConfiguration = configuration
+        self.configuration = configuration
     }
     
     required public init?(coder: NSCoder) {

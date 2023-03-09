@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		026D01C56537F32E6F4A6BE9 /* Pods_FrenchToast_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 045F63ADBE038370A744959B /* Pods_FrenchToast_Tests.framework */; };
-		06E1B3590AF02B78DB859B34 /* Pods_FrenchToast_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F83CC2ACBFA27B9C0C5A7DE /* Pods_FrenchToast_Example.framework */; };
+		0586C53F5ECB17CEEE99863D /* Pods_French_Toast_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEB4396A922D64621DF1211 /* Pods_French_Toast_Tests.framework */; };
+		3DC4772BD60744984CDACB40 /* Pods_French_Toast_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28C03A6421A3DB07602CADA /* Pods_French_Toast_Demo.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -31,27 +31,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		045F63ADBE038370A744959B /* Pods_FrenchToast_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrenchToast_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACD01AFB9204008FA782 /* FrenchToast_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrenchToast_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD01AFB9204008FA782 /* French Toast Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "French Toast Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* FrenchToast_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenchToast_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACE51AFB9204008FA782 /* French Toast Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "French Toast Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		86540E0D375A3333724C9E2E /* FrenchToast.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FrenchToast.podspec; path = ../FrenchToast.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8A4F6749C2616EE53ABAD2E0 /* Pods-FrenchToast_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrenchToast_Example.debug.xcconfig"; path = "Target Support Files/Pods-FrenchToast_Example/Pods-FrenchToast_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		8F83CC2ACBFA27B9C0C5A7DE /* Pods_FrenchToast_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrenchToast_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C770C858D78BAF3215F4C4A /* Pods-French Toast Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-French Toast Tests.release.xcconfig"; path = "Target Support Files/Pods-French Toast Tests/Pods-French Toast Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A005FBE929AFE89700098000 /* UtilityToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityToastView.swift; sourceTree = "<group>"; };
 		A005FBED29B27A3C00098000 /* NotificationToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationToastView.swift; sourceTree = "<group>"; };
 		A0E78AF52996CC19005A6740 /* MusicToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicToastView.swift; sourceTree = "<group>"; };
 		A9537BE9D9A112B87FC94365 /* Pods-FrenchToast_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrenchToast_Example.release.xcconfig"; path = "Target Support Files/Pods-FrenchToast_Example/Pods-FrenchToast_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A9566B4E5F23E1719241F3B3 /* Pods-French Toast Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-French Toast Demo.release.xcconfig"; path = "Target Support Files/Pods-French Toast Demo/Pods-French Toast Demo.release.xcconfig"; sourceTree = "<group>"; };
+		AAEB4396A922D64621DF1211 /* Pods_French_Toast_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_French_Toast_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA8B462AD8787AC2F44A0492 /* Pods-French Toast Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-French Toast Tests.debug.xcconfig"; path = "Target Support Files/Pods-French Toast Tests/Pods-French Toast Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C184F7B168E9963ADCCFE308 /* Pods-FrenchToast_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrenchToast_Tests.release.xcconfig"; path = "Target Support Files/Pods-FrenchToast_Tests/Pods-FrenchToast_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C27DB92C204345031AAF4FC0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D28C03A6421A3DB07602CADA /* Pods_French_Toast_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_French_Toast_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D406EC83315DC374193F8EC9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F7C7B9433964C82D8A18BEC1 /* Pods-French Toast Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-French Toast Demo.debug.xcconfig"; path = "Target Support Files/Pods-French Toast Demo/Pods-French Toast Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		FB99816F5D1DAF077DF49A10 /* Pods-FrenchToast_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrenchToast_Tests.debug.xcconfig"; path = "Target Support Files/Pods-FrenchToast_Tests/Pods-FrenchToast_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06E1B3590AF02B78DB859B34 /* Pods_FrenchToast_Example.framework in Frameworks */,
+				3DC4772BD60744984CDACB40 /* Pods_French_Toast_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				026D01C56537F32E6F4A6BE9 /* Pods_FrenchToast_Tests.framework in Frameworks */,
+				0586C53F5ECB17CEEE99863D /* Pods_French_Toast_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,8 +94,8 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD01AFB9204008FA782 /* FrenchToast_Example.app */,
-				607FACE51AFB9204008FA782 /* FrenchToast_Tests.xctest */,
+				607FACD01AFB9204008FA782 /* French Toast Demo.app */,
+				607FACE51AFB9204008FA782 /* French Toast Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,6 +159,10 @@
 				A9537BE9D9A112B87FC94365 /* Pods-FrenchToast_Example.release.xcconfig */,
 				FB99816F5D1DAF077DF49A10 /* Pods-FrenchToast_Tests.debug.xcconfig */,
 				C184F7B168E9963ADCCFE308 /* Pods-FrenchToast_Tests.release.xcconfig */,
+				F7C7B9433964C82D8A18BEC1 /* Pods-French Toast Demo.debug.xcconfig */,
+				A9566B4E5F23E1719241F3B3 /* Pods-French Toast Demo.release.xcconfig */,
+				BA8B462AD8787AC2F44A0492 /* Pods-French Toast Tests.debug.xcconfig */,
+				9C770C858D78BAF3215F4C4A /* Pods-French Toast Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -162,8 +170,8 @@
 		B36654B45D4099B8CE490592 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8F83CC2ACBFA27B9C0C5A7DE /* Pods_FrenchToast_Example.framework */,
-				045F63ADBE038370A744959B /* Pods_FrenchToast_Tests.framework */,
+				D28C03A6421A3DB07602CADA /* Pods_French_Toast_Demo.framework */,
+				AAEB4396A922D64621DF1211 /* Pods_French_Toast_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -171,9 +179,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		607FACCF1AFB9204008FA782 /* FrenchToast_Example */ = {
+		607FACCF1AFB9204008FA782 /* French Toast Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FrenchToast_Example" */;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "French Toast Demo" */;
 			buildPhases = (
 				51751DEAA3D3AB23FD86D9C9 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
@@ -185,14 +193,14 @@
 			);
 			dependencies = (
 			);
-			name = FrenchToast_Example;
+			name = "French Toast Demo";
 			productName = FrenchToast;
-			productReference = 607FACD01AFB9204008FA782 /* FrenchToast_Example.app */;
+			productReference = 607FACD01AFB9204008FA782 /* French Toast Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		607FACE41AFB9204008FA782 /* FrenchToast_Tests */ = {
+		607FACE41AFB9204008FA782 /* French Toast Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FrenchToast_Tests" */;
+			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "French Toast Tests" */;
 			buildPhases = (
 				67BD611A89FAF9853F8A649D /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
@@ -204,9 +212,9 @@
 			dependencies = (
 				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
 			);
-			name = FrenchToast_Tests;
+			name = "French Toast Tests";
 			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* FrenchToast_Tests.xctest */;
+			productReference = 607FACE51AFB9204008FA782 /* French Toast Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -246,8 +254,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACCF1AFB9204008FA782 /* FrenchToast_Example */,
-				607FACE41AFB9204008FA782 /* FrenchToast_Tests */,
+				607FACCF1AFB9204008FA782 /* French Toast Demo */,
+				607FACE41AFB9204008FA782 /* French Toast Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -288,7 +296,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FrenchToast_Example-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-French Toast Demo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -310,7 +318,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FrenchToast_Tests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-French Toast Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -323,7 +331,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FrenchToast_Example/Pods-FrenchToast_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-French Toast Demo/Pods-French Toast Demo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FrenchToast/FrenchToast.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -332,7 +340,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FrenchToast_Example/Pods-FrenchToast_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-French Toast Demo/Pods-French Toast Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -363,7 +371,7 @@
 /* Begin PBXTargetDependency section */
 		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 607FACCF1AFB9204008FA782 /* FrenchToast_Example */;
+			target = 607FACCF1AFB9204008FA782 /* French Toast Demo */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -489,12 +497,12 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A4F6749C2616EE53ABAD2E0 /* Pods-FrenchToast_Example.debug.xcconfig */;
+			baseConfigurationReference = F7C7B9433964C82D8A18BEC1 /* Pods-French Toast Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B34U9MBMKJ;
 				INFOPLIST_FILE = FrenchToast/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -503,19 +511,19 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9537BE9D9A112B87FC94365 /* Pods-FrenchToast_Example.release.xcconfig */;
+			baseConfigurationReference = A9566B4E5F23E1719241F3B3 /* Pods-French Toast Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B34U9MBMKJ;
 				INFOPLIST_FILE = FrenchToast/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -524,14 +532,14 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB99816F5D1DAF077DF49A10 /* Pods-FrenchToast_Tests.debug.xcconfig */;
+			baseConfigurationReference = BA8B462AD8787AC2F44A0492 /* Pods-French Toast Tests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = B34U9MBMKJ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -555,7 +563,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C184F7B168E9963ADCCFE308 /* Pods-FrenchToast_Tests.release.xcconfig */;
+			baseConfigurationReference = 9C770C858D78BAF3215F4C4A /* Pods-French Toast Tests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = B34U9MBMKJ;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -585,7 +593,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FrenchToast_Example" */ = {
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "French Toast Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,
@@ -594,7 +602,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "FrenchToast_Tests" */ = {
+		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "French Toast Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,

@@ -50,11 +50,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapShowToast(_ sender: Any) {
-        let toastView = createToastView()
-        let didTap: (() -> Void) = {
-            self.view.hideToast(toastView)
-        }
-        self.view.showToast(toastView, didTap: didTap)
+        let toast = createToastView()
+        self.view.showToast(toast)
     }
     
     func createToastView() -> ToastView {
@@ -100,8 +97,14 @@ class ViewController: UIViewController {
             configuration.suggestedSizeForCompactSizeClass = CGSize(width: 400, height: 64)
             configuration.suggestedSizeForRegularSizeClass = CGSize(width: 550, height: 64)
             
+            // Dismiss only when the Apply button is selected
+            configuration.isTapToDismissEnabled = false
+            
             let utilityToastView = UtilityToastView(configuration: configuration)
             utilityToastView.titleLabel.text = "3 selected"
+            utilityToastView.didTapApplyButton = {
+                self.view.hideToast(utilityToastView)
+            }
             return utilityToastView
             
         default:

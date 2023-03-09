@@ -42,9 +42,9 @@ public enum ToastHorizontalAlignment: Int {
     /// Align to the left of the containing view, respecting `ToastConfiguration.horizontalMarginForCompactSizeClass` and `ToastConfiguration.horizontalMarginForRegularSizeClass`, as well as `safeAreaInset.left`.
     case left
     
-    internal func originCoordinate(forToast toast: UIView, inSuperview superview: UIView) -> Double {
+    internal func originCoordinate(forToast toast: ToastView, inSuperview superview: UIView) -> Double {
         
-        let configuration = toast.toastConfiguration ?? ToastConfiguration.sharedDefault
+        let configuration = toast.configuration
         let size = configuration.size(forToast: toast, inSuperView: superview)
         let horizontalMargin = superview.isCompact ? configuration.horizontalMarginForCompactSizeClass : configuration.horizontalMarginForRegularSizeClass
         
@@ -88,9 +88,9 @@ public enum ToastVerticalAlignment: Int {
     case center
     case bottom
     
-    public func originCoordinate(forToast toast: UIView, inSuperview superview: UIView) -> Double {
+    public func originCoordinate(forToast toast: ToastView, inSuperview superview: UIView) -> Double {
         
-        let configuration = toast.toastConfiguration ?? ToastConfiguration.sharedDefault
+        let configuration = toast.configuration
         let size = configuration.size(forToast: toast, inSuperView: superview)
         let verticalMargin = superview.isCompact ? configuration.verticalMarginForCompactSizeClass : configuration.verticalMarginForRegularSizeClass
         

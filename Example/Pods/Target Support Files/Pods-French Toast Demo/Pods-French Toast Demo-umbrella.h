@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_FrenchToast_ExampleVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_FrenchToast_ExampleVersionString[];
+FOUNDATION_EXPORT double Pods_French_Toast_DemoVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_French_Toast_DemoVersionString[];
 

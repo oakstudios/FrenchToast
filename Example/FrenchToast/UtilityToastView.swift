@@ -28,11 +28,14 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
+
 import UIKit
 
 import FrenchToast
 
 class UtilityToastView: ToastView {
+    
+    var didTapApplyButton: (() -> Void)?
             
     let innerPadding: CGFloat = 12
     
@@ -134,8 +137,11 @@ class UtilityToastView: ToastView {
         bottomAnchor.constraint(equalTo: menuButton.bottomAnchor, constant: innerPadding).isActive = true
         menuButton.widthAnchor.constraint(equalToConstant: 128).isActive = true
         
-        menuButton.menu = menu
-        menuButton.showsMenuAsPrimaryAction = true
+        if #available(iOS 14.0, *) {
+            menuButton.menu = menu
+            menuButton.showsMenuAsPrimaryAction = true
+        }
+        
         setMenuButtonTitle("Stack")
         
         // Apply button
@@ -146,7 +152,13 @@ class UtilityToastView: ToastView {
         topAnchor.constraint(equalTo: applyButton.topAnchor, constant: -innerPadding).isActive = true
         bottomAnchor.constraint(equalTo: applyButton.bottomAnchor, constant: innerPadding).isActive = true
         applyButton.widthAnchor.constraint(equalToConstant: 64).isActive = true
+        
+        applyButton.addTarget(self, action: #selector(didTapApplyButton(sender:)), for: .touchUpInside)
 
+    }
+    
+    @objc func didTapApplyButton(sender: UIButton) {
+        self.didTapApplyButton?()
     }
     
     func setMenuButtonTitle(_ titleString: String) {
