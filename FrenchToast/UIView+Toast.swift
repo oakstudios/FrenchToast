@@ -144,7 +144,7 @@ public extension UIView {
         toast.frame = configuration.frame(forToast: toast, inSuperView: self)
         toast.alpha = 0.0
         
-        if configuration.isTapToDismissEnabled {
+        if configuration.isTapToDismissEnabled || toast.didTap != nil {
             let recognizer = UITapGestureRecognizer(target: self, action: #selector(UIView.handleToastTapped(_:)))
             toast.addGestureRecognizer(recognizer)
             toast.isUserInteractionEnabled = true

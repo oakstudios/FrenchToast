@@ -34,11 +34,11 @@ import UIKit
 
 open class ToastView: UIView {
     
-    var configuration: ToastConfiguration = ToastConfiguration.sharedDefault
+    public var configuration: ToastConfiguration = ToastConfiguration.sharedDefault
     
-    var didTap: (() -> Void)?
+    public var didTap: (() -> Void)?
     
-    var didComplete: ((_ fromTap: Bool) -> Void)?
+    public var didComplete: ((_ fromTap: Bool) -> Void)?
     
     public init(configuration: ToastConfiguration) {
         super.init(frame: .zero)
@@ -51,12 +51,12 @@ open class ToastView: UIView {
     
     var layoutDidChangePassthrough: ((UITraitCollection?) -> Void)?
     
-    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    open override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         self.layoutDidChangePassthrough?(previousTraitCollection)
     }
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         self.layoutDidChangePassthrough?(nil)
     }
